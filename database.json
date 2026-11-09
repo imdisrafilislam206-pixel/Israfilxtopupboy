@@ -1,0 +1,720 @@
+{
+  "settings": {
+    "general": {
+      "siteName": "Pixel Topup",
+      "notice": "স্বাগতম Pixel Topup-এ এখানে ২৪ আপনার পছন্দের টপ-আপ সার্ভিস পাবেন। কোন সমস্যা হলে টেলিগ্রাম বা হোয়াটসঅ্যাপে যোগাযোগ করবেন।",
+      "autoPayEnabled": false,
+      "playerNameCheckApiUrl": "https://tyno-ffinfo.tzsm.workers.dev/name?uid={uid}",
+      "logoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "promoImageUrl": "",
+      "walletLogoUrl": "https://host.tscv.workers.dev/img/5ae86a6923a84f3f",
+      "autoPayLogoUrl": "https://host.tscv.workers.dev/img/ee9737f984c641b1",
+      "faviconUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "footerThumbnailUrl": "https://host.tscv.workers.dev/img/4daab908e40648aa",
+      "homeNoticeImageUrl": "https://host.tscv.workers.dev/img/9d1d911cea6547ff",
+      "bannerUrls": [
+        "https://host.tscv.workers.dev/img/e229f70e005d447d",
+        "https://host.tscv.workers.dev/img/fff831fd629940dc"
+      ],
+      "headerLogoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "aboutLogoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "bKashLogoUrl": "https://images.seeklogo.com/logo-png/27/1/bkash-logo-png_seeklogo-273684.png",
+      "NagadLogoUrl": "https://images.seeklogo.com/logo-png/35/1/nagad-logo-png_seeklogo-356936.png",
+      "RocketLogoUrl": "https://images.seeklogo.com/logo-png/31/1/dutch-bangla-rocket-logo-png_seeklogo-317692.png",
+      "autoPayImageUrl": "https://host.tscv.workers.dev/img/ee9737f984c641b1",
+      "whatsapp": "8801700000000",
+      "telegram": "https://t.me/PixelTopup",
+      "facebook": "https://facebook.com",
+      "youtube": "https://youtube.com",
+      "appLink": "#",
+      "ffLikeApiUrl": "https://demosite.vercel.app/like?uid={uid}&server_name=BD",
+      "ffLikeAutoTrigger": true
+    },
+    "videos": {
+      "howToAddMoney": "dQw4w9WgXcQ"
+    }
+  },
+  "admin": {
+    "payment": {
+      "number": "01700000000",
+      "method": "bKash",
+      "bKash": "01700000000",
+      "bkash": "01700000000",
+      "Nagad": "01700000000",
+      "nagad": "01700000000",
+      "Rocket": "01700000000",
+      "rocket": "01700000000"
+    },
+    "email": "admin@gmail.com",
+    "password": "admin@123",
+    "credentials": {
+      "email": "admin@gmail.com",
+      "password": "admin@123"
+    }
+  },
+  "categories": {
+    "mobile": {
+      "name": "Mobile Games & Offers",
+      "slot": 1
+    }
+  },
+  "banners": {
+    "banner_1": {
+      "image": "https://host.tscv.workers.dev/img/e229f70e005d447d",
+      "slot": 1
+    },
+    "banner_2": {
+      "image": "https://host.tscv.workers.dev/img/fff831fd629940dc",
+      "slot": 2
+    }
+  },
+  "services": {
+    "freefire": {
+      "products": {
+        "706": {
+          "name": "25 Diamond",
+          "price": 20,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "707": {
+          "name": "50 Diamond",
+          "price": 35,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "660": {
+          "name": "115 Diamond",
+          "price": 79,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "661": {
+          "name": "240 Diamond",
+          "price": 158,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "662": {
+          "name": "355 Diamond",
+          "price": 237,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "718": {
+          "name": "480 Diamond",
+          "price": 316,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "663": {
+          "name": "610 Diamond",
+          "price": 400,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "664": {
+          "name": "850 Diamond",
+          "price": 558,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "665": {
+          "name": "1090 Diamond",
+          "price": 716,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "666": {
+          "name": "1240 Diamond",
+          "price": 800,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "667": {
+          "name": "1850 Diamond",
+          "price": 1200,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "668": {
+          "name": "2530 Diamond",
+          "price": 1610,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "669": {
+          "name": "3140 Diamond",
+          "price": 2000,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "670": {
+          "name": "5060 Diamond",
+          "price": 3220,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "671": {
+          "name": "10120 Diamond",
+          "price": 6400,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "672": {
+          "name": "Weekly",
+          "price": 158,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "749": {
+          "name": "Weekly Lite",
+          "price": 40,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        },
+        "673": {
+          "name": "Monthly",
+          "price": 780,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+        }
+      },
+      "name": "Free Fire",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\nPlayer ID Code সঠিকভাবে দিন।\nঅর্ডার কমপ্লিট হওয়ার পর ডায়মন্ড না এলে support-এ যোগাযোগ করুন।",
+      "image": "https://host.tscv.workers.dev/img/025f7f7611ff49e7",
+      "icon": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"
+    },
+    "unipin-voucher": {
+      "products": {
+        "57": {
+          "name": "25 Daimon pin",
+          "price": 22,
+          "stockCount": 4,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "16": {
+          "name": "50 Diamond Pin",
+          "price": 37,
+          "stockCount": 23,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "17": {
+          "name": "115 Diamond Pin",
+          "price": 78,
+          "stockCount": 30,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "18": {
+          "name": "240 Diamond Pin",
+          "price": 158,
+          "stockCount": 22,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "19": {
+          "name": "610 Diamond Pin",
+          "price": 400,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "20": {
+          "name": "1240 Diamond Pin",
+          "price": 800,
+          "stockCount": 2,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "21": {
+          "name": "2530 Diamond Pin",
+          "price": 1590,
+          "stockCount": 3,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "22": {
+          "name": "Weekly Pin",
+          "price": 158,
+          "stockCount": 20,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        },
+        "23": {
+          "name": "Monthly Pin",
+          "price": 780,
+          "stockCount": 6,
+          "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+        }
+      },
+      "name": "UNIPIN VOUCHER BD",
+      "categoryId": "mobile",
+      "type": "code",
+      "rules": "কিভাবে ইউনিপিন ভাউচার দিয়ে টপআপ করবেন ??\n\n\n⦿ প্রথমে কত ডায়মন্ড নিতে চান সে অনুযায়ী Unipin Voucher পিন সিলেক্ট করুন ।\n\n⦿ পিন পাওয়ার পর shop.garena.my ওয়েবসাইটে যান ।\n\n⦿ FF অপশনে গিয়ে আপনার Player ID দিয়ে লগিন করুন ।\n\n⦿ এরপর Proccess to Payment ক্লিক করে কত ডায়মন্ড টপআপ করতে চান সেটা সিলেক্ট করে পিন দিয়ে Purchase করে নিন ।\n\n \n\n\nHow to Topup with Unipin Voucher ??\n\n\n⦿ First select the Unipin Voucher Pin according to how many diamonds you want to buy.\n\n⦿ Go to shop.garena.my website after receiving PIN.\n\n⦿ Go to FF option and login with your Player ID.\n\n⦿ Then click Process to Payment, select how many diamonds you want to top up and purchase with PIN.",
+      "image": "https://host.tscv.workers.dev/img/1f84f36601c94303",
+      "icon": "https://host.tscv.workers.dev/img/1f84f36601c94303"
+    },
+    "weekly-monthly": {
+      "products": {
+        "629": {
+          "name": "Weekly",
+          "price": 158,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "630": {
+          "name": "2X Weekly",
+          "price": 316,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "631": {
+          "name": "3X Weekly",
+          "price": 474,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "632": {
+          "name": "5X Weekly",
+          "price": 790,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "634": {
+          "name": "Monthly",
+          "price": 780,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "635": {
+          "name": "2X Monthly",
+          "price": 1580,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "768": {
+          "name": "5X Monthly",
+          "price": 3900,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "769": {
+          "name": "10X Monthly",
+          "price": 7800,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "638": {
+          "name": "1Weekly + 1Monthly",
+          "price": 940,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        },
+        "639": {
+          "name": "4Weekly + 1Monthly",
+          "price": 1410,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+        }
+      },
+      "name": "WEEKLY MONTHLY OFFER",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "⦿ শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয় ।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য ID Pass দিতে হবে।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।",
+      "image": "https://host.tscv.workers.dev/img/2f8a5b55978741ea",
+      "icon": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"
+    },
+    "weekly-lite": {
+      "products": {
+        "744": {
+          "name": "1x Weekly Lite",
+          "price": 40,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+        },
+        "745": {
+          "name": "2x Weekly Lite",
+          "price": 80,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+        },
+        "746": {
+          "name": "3x Weekly Lite",
+          "price": 120,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+        },
+        "747": {
+          "name": "5x Weekly Lite",
+          "price": 200,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+        },
+        "748": {
+          "name": "10x Weekly Lite",
+          "price": 400,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+        }
+      },
+      "name": "WEEKLY LITE BD",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "⦿ শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID Code ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয়।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য আইডি পাসওয়ার্ড দিতে হবে ।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।",
+      "image": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7",
+      "icon": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"
+    },
+    "level-up-pass": {
+      "products": {
+        "771": {
+          "name": "6 level (120 Diamond)",
+          "price": 40,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "772": {
+          "name": "10 level (200 Diamond)",
+          "price": 75,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "773": {
+          "name": "15 level (200 Diamond)",
+          "price": 75,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "774": {
+          "name": "20 level (200 Diamond)",
+          "price": 75,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "775": {
+          "name": "25 level (200 Diamond)",
+          "price": 75,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "776": {
+          "name": "30 level (200 Diamond)",
+          "price": 105,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        },
+        "777": {
+          "name": "Level Up Pass Full (1270 Diamond)",
+          "price": 445,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+        }
+      },
+      "name": "Level Up Pass",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "null",
+      "image": "https://host.tscv.workers.dev/img/4a5940cb702840cf",
+      "icon": "https://host.tscv.workers.dev/img/4a5940cb702840cf"
+    },
+    "freefire-like": {
+      "products": {
+        "826": {
+          "name": "200 Likes ⇨ Instant Delivery",
+          "price": 25,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "827": {
+          "name": "400 Likes ⇨ 2 Days Package",
+          "price": 50,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "828": {
+          "name": "600 Likes ⇨ 3 Days Package",
+          "price": 75,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "829": {
+          "name": "1400 Likes ⇨ 7 Days Package",
+          "price": 170,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "830": {
+          "name": "3000 Likes ⇨ 15 Days Package",
+          "price": 370,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "831": {
+          "name": "6000 Likes ⇨ 1 Month Package",
+          "price": 730,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "832": {
+          "name": "12000 Likes ⇨ 2 Month Package",
+          "price": 1450,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "833": {
+          "name": "18000 Likes ⇨ 3 Month Package",
+          "price": 2180,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "834": {
+          "name": "36000 Likes ⇨ 6 Month Package",
+          "price": 4400,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        },
+        "835": {
+          "name": "73000 Likes ⇨ 1 Year Package",
+          "price": 8900,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"
+        }
+      },
+      "name": "FF Like👍",
+      "categoryId": "mobile",
+      "type": "auto-topup",
+      "rules": "📢 অর্ডার করার আগে ভালোভাবে পড়ে নিন!\n\n \n\n✅ এক আইডিতে প্রতিদিন একবার অর্ডার করতে পারবেন।\n\n \n\n❌ একই দিনে একই আইডিতে বারবার অর্ডার করলে টাকা ফেরত দেওয়া হবে না।\n\n \n\n━━━━━━━━━━━━━━━━━━━━\n\n \n\n👍 Likes",
+      "image": "https://host.tscv.workers.dev/img/a8be29d5a2c64979",
+      "icon": "https://host.tscv.workers.dev/img/a8be29d5a2c64979",
+      "apiUrl": ""
+    },
+    "indonesia-topup": {
+      "products": {
+        "709": {
+          "name": "50 Diamond",
+          "price": 65,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "710": {
+          "name": "70 Diamond",
+          "price": 90,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "711": {
+          "name": "140 Diamond",
+          "price": 180,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "712": {
+          "name": "355 Diamond",
+          "price": 445,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "713": {
+          "name": "720 Diamond",
+          "price": 890,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "714": {
+          "name": "Weekly",
+          "price": 255,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "715": {
+          "name": "Monthly",
+          "price": 800,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        },
+        "717": {
+          "name": "Bp Card",
+          "price": 410,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"
+        }
+      },
+      "name": "INDONESIA TOPUP",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "⦿ শুধুমাত্র Indonesia সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID Code ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয়।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য আইডি পাসওয়ার্ড দিতে হবে ।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।",
+      "image": "https://host.tscv.workers.dev/img/141a8737b5564319",
+      "icon": "https://host.tscv.workers.dev/img/141a8737b5564319"
+    },
+    "premium-user": {
+      "products": {
+        "819": {
+          "name": "115 Diamond",
+          "price": 77,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "820": {
+          "name": "240 Diamond",
+          "price": 155,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "821": {
+          "name": "610 Diamond",
+          "price": 390,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "822": {
+          "name": "1240 Diamond",
+          "price": 785,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "823": {
+          "name": "2530 Diamond",
+          "price": 1580,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "824": {
+          "name": "Weekly",
+          "price": 156,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        },
+        "825": {
+          "name": "Monthly",
+          "price": 770,
+          "stockCount": 1,
+          "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+        }
+      },
+      "name": "Premium User",
+      "categoryId": "mobile",
+      "type": "uid",
+      "rules": "যেসব গ্রাহক Pixel Topup থেকে মোট 20,000 টাকা বা তার বেশি মূল্যের পণ্য ক্রয় করেছেন, তারা Premium Users অফারটি পাওয়ার যোগ্য হবেন। নির্ধারিত পরিমাণ টাকার টপ-আপ সম্পন্ন হলে, আপনি পরবর্তী টপ-আপে ডিসকাউন্ট উপভোগ করতে পারবেন।\n\n \n\n\n✨ অফারের বিস্তারিত:\n\n\n \n\n✔ শুধুমাত্র বিশ্বস্ত গ্রাহকদের জন্য প্রিমিয়াম পুরস্কার\n\n \n\n✔ আমাদের থেকে মোট ৳20,000+ টাকার কেনাকাটা থাকতে হবে\n\n \n\n✔ পরবর্তী টপ-আপে ডিসকাউন্ট প্রযোজ্য হবে\n\n \n\n✔ একজন গ্রাহক ২৪ ঘন্টার মধ্যে যেকোনো সর্বোচ্চ ২টি প্যাকেজ অর্ডার করতে পারবেন",
+      "image": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4",
+      "icon": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"
+    }
+  },
+  "assets": {
+    "site_logo": {
+      "name": "site_logo",
+      "url": "https://host.tscv.workers.dev/img/11a5c0c5f4904db7",
+      "provider": "host.tscv.workers.dev"
+    },
+    "wallet_logo": {
+      "name": "wallet_logo",
+      "url": "https://host.tscv.workers.dev/img/5ae86a6923a84f3f",
+      "provider": "host.tscv.workers.dev"
+    },
+    "autopay_logo": {
+      "name": "autopay_logo",
+      "url": "https://host.tscv.workers.dev/img/ee9737f984c641b1",
+      "provider": "host.tscv.workers.dev"
+    },
+    "favicon": {
+      "name": "favicon",
+      "url": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "provider": "host.tscv.workers.dev"
+    },
+    "icon_192": {
+      "name": "icon_192",
+      "url": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "provider": "host.tscv.workers.dev"
+    },
+    "icon_512": {
+      "name": "icon_512",
+      "url": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "provider": "host.tscv.workers.dev"
+    },
+    "footer_thumbnail": {
+      "name": "footer_thumbnail",
+      "url": "https://host.tscv.workers.dev/img/4daab908e40648aa",
+      "provider": "host.tscv.workers.dev"
+    },
+    "home_notice": {
+      "name": "home_notice",
+      "url": "https://host.tscv.workers.dev/img/9d1d911cea6547ff",
+      "provider": "host.tscv.workers.dev"
+    },
+    "banner_1": {
+      "name": "banner_1",
+      "url": "https://host.tscv.workers.dev/img/e229f70e005d447d",
+      "provider": "host.tscv.workers.dev"
+    },
+    "banner_2": {
+      "name": "banner_2",
+      "url": "https://host.tscv.workers.dev/img/fff831fd629940dc",
+      "provider": "host.tscv.workers.dev"
+    },
+    "freefire_product": {
+      "name": "freefire_product",
+      "url": "https://host.tscv.workers.dev/img/025f7f7611ff49e7",
+      "provider": "host.tscv.workers.dev"
+    },
+    "unipin-voucher_product": {
+      "name": "unipin-voucher_product",
+      "url": "https://host.tscv.workers.dev/img/1f84f36601c94303",
+      "provider": "host.tscv.workers.dev"
+    },
+    "weekly-monthly_product": {
+      "name": "weekly-monthly_product",
+      "url": "https://host.tscv.workers.dev/img/2f8a5b55978741ea",
+      "provider": "host.tscv.workers.dev"
+    },
+    "weekly-lite_product": {
+      "name": "weekly-lite_product",
+      "url": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7",
+      "provider": "host.tscv.workers.dev"
+    },
+    "level-up-pass_product": {
+      "name": "level-up-pass_product",
+      "url": "https://host.tscv.workers.dev/img/4a5940cb702840cf",
+      "provider": "host.tscv.workers.dev"
+    },
+    "freefire-like_product": {
+      "name": "freefire-like_product",
+      "url": "https://host.tscv.workers.dev/img/a8be29d5a2c64979",
+      "provider": "host.tscv.workers.dev"
+    },
+    "indonesia-topup_product": {
+      "name": "indonesia-topup_product",
+      "url": "https://host.tscv.workers.dev/img/141a8737b5564319",
+      "provider": "host.tscv.workers.dev"
+    },
+    "premium-user_product": {
+      "name": "premium-user_product",
+      "url": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4",
+      "provider": "host.tscv.workers.dev"
+    },
+    "pixel_topup_logo": {
+      "name": "pixel_topup_logo",
+      "url": "https://host.tscv.workers.dev/img/9bc4cd3f5a7c45cf",
+      "provider": "host.tscv.workers.dev"
+    },
+    "pixel_topup_logo_header": {
+      "name": "pixel_topup_logo_header",
+      "url": "https://host.tscv.workers.dev/img/03506b2a447b460d",
+      "provider": "host.tscv.workers.dev"
+    },
+    "bKashLogoUrl": {
+      "name": "bKashLogoUrl",
+      "url": "https://images.seeklogo.com/logo-png/27/1/bkash-logo-png_seeklogo-273684.png",
+      "provider": "seeklogo.com"
+    },
+    "NagadLogoUrl": {
+      "name": "NagadLogoUrl",
+      "url": "https://images.seeklogo.com/logo-png/35/1/nagad-logo-png_seeklogo-356936.png",
+      "provider": "seeklogo.com"
+    },
+    "RocketLogoUrl": {
+      "name": "RocketLogoUrl",
+      "url": "https://images.seeklogo.com/logo-png/31/1/dutch-bangla-rocket-logo-png_seeklogo-317692.png",
+      "provider": "seeklogo.com"
+    },
+    "autoPayImageUrl": {
+      "name": "autoPayImageUrl",
+      "url": "https://host.tscv.workers.dev/img/ee9737f984c641b1",
+      "provider": "host.tscv.workers.dev"
+    }
+  }
+}

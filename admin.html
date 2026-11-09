@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<!-- ============================================================================ -->
+<!-- DEVELOP BY https://t.me/Infinity_Codex                                       -->
+<!-- Project: Pixel Topup                                                         -->
+<!-- ============================================================================ -->
+<html lang="en">
+<!-- DEVELOP BY https://t.me/Infinity_Codex -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Pixel Topup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Pixel Topup Favicon & Web App Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230b103b%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%235215b5%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237c3aed%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gem%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23a855f7%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2338bdf8%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22glow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2210%22%20result%3D%22blur%22/%3E%0A%20%20%20%20%20%20%3CfeComposite%20in%3D%22SourceGraphic%22%20in2%3D%22blur%22%20operator%3D%22over%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22128%22%20fill%3D%22url%28%23bg%29%22/%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22472%22%20height%3D%22472%22%20rx%3D%22112%22%20fill%3D%22none%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.22%29%22%20stroke-width%3D%228%22/%3E%0A%20%20%3Cg%20transform%3D%22translate%28106%2C%2096%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M150%2016%20L270%2085%20L150%20154%20L30%2085%20Z%22%20fill%3D%22%23c084fc%22%20filter%3D%22url%28%23glow%29%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M150%2036%20L248%2092%20L150%20144%20L52%2092%20Z%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.32%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M30%20145%20L150%20214%20L270%20145%22%20fill%3D%22none%22%20stroke%3D%22%23e9d5ff%22%20stroke-width%3D%2226%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M30%20205%20L150%20274%20L270%20205%22%20fill%3D%22none%22%20stroke%3D%22%2338bdf8%22%20stroke-width%3D%2226%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M140%2068%20L178%20114%20L144%20124%20L168%20178%20L122%20126%20L150%20116%20Z%22%20fill%3D%22%23ffffff%22%20filter%3D%22url%28%23glow%29%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://host.tscv.workers.dev/img/03506b2a447b460d">
+    <link rel="apple-touch-icon" href="https://host.tscv.workers.dev/img/03506b2a447b460d">
+    <link id="dynamic-favicon" rel="icon" href="https://host.tscv.workers.dev/img/03506b2a447b460d">
+    <meta name="theme-color" content="#5215b5">
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+    <script>
+    // DEVELOP BY https://t.me/Infinity_Codex
+        // Firebase Web config (requires ONLY: 1. Google & Email/Password Auth, 2. Realtime Database).
+        // DEVELOP BY https://t.me/Infinity_Codex
+        window.PIXEL_FIREBASE_CONFIG = {
+            apiKey: "AIzaSyD-16NmuSFlmb3-uiW17pL8VVxwnQnF3g8",
+            authDomain: "pixeltopup-f6fc1.firebaseapp.com",
+            databaseURL: "https://pixeltopup-f6fc1-default-rtdb.firebaseio.com",
+            projectId: "pixeltopup-f6fc1",
+            storageBucket: "pixeltopup-f6fc1.firebasestorage.app",
+            messagingSenderId: "590882144270",
+            appId: "1:590882144270:web:5b9ce3fd2d231d955a7c5f",
+            measurementId: "G-RPLL1CXECB"
+        };
+
+        window.pixelFirebaseConfigReady = function (config) {
+            const required = ["apiKey", "authDomain", "projectId"];
+            return !!config && required.every((key) => {
+                const value = config[key];
+                return typeof value === "string" && value.trim() !== "" && !value.startsWith("REPLACE_");
+            });
+        };
+
+        window.showPixelFirebaseSetupNotice = function () {
+            if (!document.body || document.getElementById("firebase-setup-notice")) return;
+            const notice = document.createElement("div");
+            notice.id = "firebase-setup-notice";
+            notice.setAttribute("role", "alert");
+            notice.style.cssText = "position:fixed;inset:0;z-index:999999;background:#111827;color:white;display:grid;place-items:center;padding:24px;font:16px/1.6 system-ui,sans-serif;text-align:center";
+            const message = document.createElement("div");
+            message.style.maxWidth = "680px";
+            const title = document.createElement("strong");
+            title.textContent = "Firebase setup required";
+            const details = document.createElement("p");
+            details.textContent = "Check the Firebase Web config, enable Google and Email/Password Authentication, and import data.json into Firebase Realtime Database.";
+            message.append(title, details);
+            notice.appendChild(message);
+            document.body.prepend(notice);
+        };
+    // DEVELOP BY https://t.me/Infinity_Codex
+    </script>
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+    <style>
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        body {
+            font-family: 'Poppins', 'Noto Serif Bengali', sans-serif;
+            background-color: #f4f5f9;
+            color: #1e293b;
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #eef0f6; }
+        ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 9999px; }
+
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        .pixel-input {
+            background-color: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            color: #0f172a;
+            padding: 11px 14px;
+            width: 100%;
+            outline: none;
+            transition: all 0.2s ease;
+            border-radius: 12px;
+            font-size: 0.875rem;
+        }
+        .pixel-input:focus {
+            background-color: #ffffff;
+            border-color: #6d28d9;
+            box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.12);
+        }
+
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        .pixel-btn {
+            background: linear-gradient(135deg, #5215b5 0%, #7c3aed 100%);
+            color: #ffffff;
+            padding: 11px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(82, 21, 181, 0.22);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .pixel-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(82, 21, 181, 0.32);
+        }
+        .pixel-btn:active { transform: scale(0.98); }
+
+        .pixel-btn-edit {
+            background-color: #f3e8ff;
+            color: #6d28d9;
+            border: 1px solid #d8b4fe;
+            padding: 7px 12px;
+            border-radius: 9px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .pixel-btn-edit:hover {
+            background-color: #6d28d9;
+            color: #ffffff;
+            border-color: #6d28d9;
+        }
+
+        .pixel-btn-danger {
+            background-color: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+            padding: 7px 12px;
+            border-radius: 9px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .pixel-btn-danger:hover {
+            background-color: #dc2626;
+            color: #ffffff;
+            border-color: #dc2626;
+        }
+
+        .pixel-btn-outline {
+            background-color: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #334155;
+            padding: 9px 16px;
+            border-radius: 11px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pixel-btn-outline:hover {
+            border-color: #5215b5;
+            color: #5215b5;
+            background-color: #faf5ff;
+        }
+
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        .pixel-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+        }
+
+        .pixel-table-wrap {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow-x: auto;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+        }
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        .pixel-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 720px;
+        }
+        .pixel-table th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .pixel-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.875rem;
+            color: #1e293b;
+            vertical-align: middle;
+        }
+        .pixel-table tr:last-child td { border-bottom: none; }
+        .pixel-table tr:hover td { background-color: #faf7ff; }
+
+        .nav-link {
+            border-radius: 12px;
+            margin: 4px 12px;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .nav-link.active {
+            background: linear-gradient(135deg, #5215b5 0%, #7c3aed 100%);
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35);
+        }
+        .nav-link:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.07);
+            color: #ffffff;
+        }
+
+        #loading-spinner {
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 16, 59, 0.65);
+            backdrop-filter: blur(4px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-left-color: #a855f7;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            animation: spin 0.85s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    
+        /* Pixel Topup Ultra-Premium Centered SweetAlert2 Modal with Full Backdrop Blur */
+        .swal2-container.swal2-shown,
+        .swal2-container.swal2-backdrop-show {
+            position: fixed !important;
+            inset: 0 !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 9999999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 16px !important;
+            background: rgba(11, 16, 59, 0.78) !important;
+            backdrop-filter: blur(14px) !important;
+            -webkit-backdrop-filter: blur(14px) !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Ensure container is completely hidden when closed */
+        .swal2-container:not(.swal2-shown):not(.swal2-backdrop-show) {
+            display: none !important;
+            pointer-events: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+
+        .swal2-container.swal2-shown .swal2-popup,
+        .swal2-container.swal2-backdrop-show .swal2-popup {
+            position: relative !important;
+            margin: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            background: #ffffff !important;
+            border-radius: 28px !important;
+            border: 1.5px solid rgba(124, 58, 237, 0.28) !important;
+            box-shadow: 0 25px 60px -12px rgba(11, 16, 59, 0.5), 0 0 0 1px rgba(124, 58, 237, 0.15) !important;
+            max-width: 92vw !important;
+            width: 380px !important;
+            padding: 26px 22px 24px !important;
+            font-family: 'Poppins', 'Noto Serif Bengali', sans-serif !important;
+            color: #0f172a !important;
+            animation: pixelModalPop 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+        }
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        @keyframes pixelModalPop {
+            0% { opacity: 0; transform: scale(0.9) translateY(14px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .swal2-title {
+            color: #0b103b !important;
+            font-size: 1.25rem !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.01em !important;
+            padding: 0.5rem 0 0.25rem !important;
+            text-align: center !important;
+        }
+        .swal2-html-container {
+            color: #475569 !important;
+            font-size: 0.88rem !important;
+            line-height: 1.6 !important;
+            font-weight: 500 !important;
+            margin: 0.5rem 0 1rem !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+        .swal2-actions {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 10px !important;
+            width: 100% !important;
+            margin: 16px auto 0 !important;
+        }
+        .swal2-confirm {
+            background: linear-gradient(135deg, #5215b5 0%, #7c3aed 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-size: 0.88rem !important;
+            padding: 12px 24px !important;
+            border-radius: 14px !important;
+            border: none !important;
+            box-shadow: 0 6px 20px rgba(82, 21, 181, 0.35) !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            flex: 1 1 130px !important;
+            text-align: center !important;
+            outline: none !important;
+        }
+        .swal2-confirm:hover {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 8px 24px rgba(82, 21, 181, 0.45) !important;
+        }
+        .swal2-confirm:active { transform: scale(0.97) !important; }
+        .swal2-cancel {
+            background: #f8fafc !important;
+            color: #475569 !important;
+            font-weight: 700 !important;
+            font-size: 0.88rem !important;
+            padding: 12px 22px !important;
+            border-radius: 14px !important;
+            border: 1.5px solid #cbd5e1 !important;
+            box-shadow: none !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            flex: 1 1 110px !important;
+            text-align: center !important;
+            outline: none !important;
+        }
+        .swal2-cancel:hover {
+            background: #e2e8f0 !important;
+            color: #0f172a !important;
+            border-color: #94a3b8 !important;
+        }
+        .swal2-icon.swal2-question {
+            border-color: #7c3aed !important;
+            color: #7c3aed !important;
+            margin: 10px auto 14px !important;
+        }
+        .swal2-icon.swal2-info {
+            border-color: #5215b5 !important;
+            color: #5215b5 !important;
+            margin: 10px auto 14px !important;
+        }
+        .swal2-icon.swal2-success {
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+            margin: 10px auto 14px !important;
+        }
+        .swal2-icon.swal2-success .swal2-success-ring {
+            border: 0.25em solid rgba(16, 185, 129, 0.25) !important;
+        }
+        .swal2-icon.swal2-success [class^='swal2-success-line'] {
+            background-color: #10b981 !important;
+        }
+        .swal2-icon.swal2-warning {
+            border-color: #f59e0b !important;
+            color: #f59e0b !important;
+            margin: 10px auto 14px !important;
+        }
+        .swal2-icon.swal2-error {
+            border-color: #ef4444 !important;
+            color: #ef4444 !important;
+            margin: 10px auto 14px !important;
+        }
+        .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+            background-color: #ef4444 !important;
+        }
+        .swal2-timer-progress-bar-container,
+        .swal2-timer-progress-bar {
+            display: none !important;
+            height: 0 !important;
+            opacity: 0 !important;
+        }
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+        .pixel-light-modal-popup {
+            background: #ffffff !important;
+            border-radius: 28px !important;
+            border: 1.5px solid rgba(124, 58, 237, 0.25) !important;
+            box-shadow: 0 25px 60px -12px rgba(11, 16, 59, 0.5) !important;
+            padding: 26px 20px 22px !important;
+            max-width: 88vw !important;
+            width: 340px !important;
+        }
+        /* DEVELOP BY https://t.me/Infinity_Codex */
+    </style>
+</head>
+<!-- DEVELOP BY https://t.me/Infinity_Codex -->
+<body class="flex h-screen overflow-hidden">
+
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="edit-modal-backdrop" class="fixed inset-0 bg-[#0b103b]/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full border border-purple-100 shadow-2xl overflow-hidden animate-fade-in">
+            <div class="bg-gradient-to-r from-[#0b103b] via-[#3b0d82] to-[#5215b5] px-6 py-4 flex items-center justify-between text-white">
+                <h3 id="edit-modal-title" class="font-bold text-base tracking-wide">Edit Item</h3>
+                <button onclick="closeEditModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition">
+                    <i class="fas fa-times text-sm"></i>
+                </button>
+            </div>
+            <div id="edit-modal-body" class="p-6 space-y-4 max-h-[75vh] overflow-y-auto"></div>
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end gap-3">
+                <button onclick="closeEditModal()" class="pixel-btn-outline">Cancel</button>
+                <button id="edit-modal-save-btn" class="pixel-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="login-modal" class="fixed inset-0 bg-gradient-to-br from-[#0b103b] via-[#27095c] to-[#5215b5] z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-white/20 overflow-hidden">
+            <div class="bg-gradient-to-r from-[#0b103b] via-[#431196] to-[#6d28d9] p-8 text-center text-white relative">
+                <div class="w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 mx-auto flex items-center justify-center mb-3 shadow-lg">
+                    <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h2 class="text-2xl font-extrabold tracking-wider">PIXEL <span class="text-purple-300">ADMIN</span></h2>
+                <p class="text-xs text-purple-200 mt-1">Pixel Topup Management Console</p>
+            </div>
+            <div class="p-7 space-y-4">
+<div>
+                    <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Admin Email</label>
+                    <input type="email" id="admin-email" value="" placeholder="Enter admin email" class="pixel-input font-medium">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Password</label>
+                    <div class="relative">
+                        <input type="password" id="admin-password" value="" placeholder="Enter your password" class="pixel-input pr-10 font-medium">
+                        <button type="button" onclick="togglePassVisibility('admin-password', this)" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-purple-600 transition">
+                            <i class="fas fa-eye text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <button onclick="loginAdmin()" class="pixel-btn w-full py-3.5 text-sm uppercase tracking-wider mt-2">
+                    <i class="fas fa-lock-open"></i> Sign In to Admin Panel
+                </button>
+                <div class="text-center pt-3 border-t border-slate-100 text-[11px] text-slate-400">
+                    © 2026 Pixel Topup • Developed by <a href="https://t.me/infinity_codex" target="_blank" class="font-bold text-[#5215b5] hover:underline">Unknown Hex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+    <aside class="w-72 bg-[#0b103b] text-white flex-col hidden fixed inset-y-0 left-0 z-50 lg:static lg:flex transition-transform transform -translate-x-full lg:translate-x-0 shadow-2xl" id="sidebar">
+        <div class="p-6 border-b border-white/10 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#5215b5] to-[#9333ea] flex items-center justify-center shadow-md">
+                    <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-extrabold tracking-wider text-white leading-none">PIXEL<span class="text-purple-400">ADMIN</span></h1>
+                    <span class="text-[10px] text-slate-400 font-medium">Pixel Topup Control</span>
+                </div>
+            </div>
+            <button class="lg:hidden text-slate-400 hover:text-white" onclick="toggleSidebar()">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+
+        <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+        <nav class="flex-1 overflow-y-auto py-4 space-y-0.5">
+            <a href="#" onclick="switchView('dashboard')" id="nav-dashboard" class="nav-link active flex items-center px-4 py-3">
+                <i class="fas fa-chart-pie w-7 text-center"></i> Dashboard
+            </a>
+            <a href="#" onclick="switchView('orders')" id="nav-orders" class="nav-link flex items-center justify-between px-4 py-3">
+                <span class="flex items-center"><i class="fas fa-shopping-bag w-7 text-center"></i> Orders</span>
+                <span id="sidebar-pending-orders" class="bg-purple-500/20 text-purple-300 border border-purple-400/30 text-[10px] px-2 py-0.5 rounded-full font-bold">0</span>
+            </a>
+            <a href="#" onclick="switchView('deposits')" id="nav-deposits" class="nav-link flex items-center justify-between px-4 py-3">
+                <span class="flex items-center"><i class="fas fa-wallet w-7 text-center"></i> Deposits</span>
+                <span id="sidebar-pending-deposits" class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] px-2 py-0.5 rounded-full font-bold">0</span>
+            </a>
+            <a href="#" onclick="switchView('categories')" id="nav-categories" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-layer-group w-7 text-center"></i> Categories
+            </a>
+            <a href="#" onclick="switchView('services')" id="nav-services" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-gamepad w-7 text-center"></i> Services & Games
+            </a>
+            <a href="#" onclick="switchView('users')" id="nav-users" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-users w-7 text-center"></i> Users
+            </a>
+            <a href="#" onclick="switchView('unpin')" id="nav-unpin" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-key w-7 text-center"></i> Unpin Codes
+            </a>
+            <a href="#" onclick="switchView('tutorials')" id="nav-tutorials" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-play-circle w-7 text-center"></i> Tutorials
+            </a>
+            <a href="#" onclick="switchView('banners')" id="nav-banners" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-images w-7 text-center"></i> Slider Banners
+            </a>
+            <a href="#" onclick="switchView('settings')" id="nav-settings" class="nav-link flex items-center px-4 py-3">
+                <i class="fas fa-sliders-h w-7 text-center"></i> Settings
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-white/10 space-y-3">
+            <button onclick="logoutAdmin()" class="w-full py-2.5 px-4 rounded-xl bg-red-500/10 hover:bg-red-500 text-red-400 hover:text-white border border-red-500/20 text-xs font-bold transition flex items-center justify-center gap-2">
+                <i class="fas fa-sign-out-alt"></i> Logout Admin
+            </button>
+            <div class="text-center text-[10px] text-slate-400">
+                Developed by <a href="https://t.me/infinity_codex" target="_blank" class="text-purple-300 font-bold hover:underline">Unknown Hex</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+    <main class="flex-1 flex flex-col hidden overflow-hidden" id="main-content">
+        <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+        <header class="bg-white border-b border-slate-200 px-4 md:px-8 py-4 flex justify-between items-center z-10 shadow-sm">
+            <div class="flex items-center gap-3">
+                <button class="lg:hidden w-10 h-10 rounded-xl bg-purple-50 text-[#5215b5] flex items-center justify-center" onclick="toggleSidebar()">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+                <div>
+                    <h2 id="page-title" class="text-lg md:text-xl font-extrabold text-slate-800">Dashboard Overview</h2>
+                    <p id="page-desc" class="text-slate-500 text-xs">Real-time control panel for Pixel Topup</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button type="button" onclick="importDefaultSeedData()" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition flex items-center gap-1.5">
+                    <i class="fas fa-database"></i> Import Default Data
+                </button>
+                <span id="connection-pill" class="px-3 py-1 rounded-full text-[11px] font-bold bg-purple-50 text-[#5215b5] border border-purple-200 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#5215b5] animate-pulse"></span> Live Mode
+                </span>
+                <div class="h-10 w-10 bg-gradient-to-br from-[#5215b5] to-[#7c3aed] rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-md">
+                    PX
+                </div>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-6">
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-dashboard" class="view-section space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-[#5215b5]">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Users</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-users">0</h3>
+                            <button onclick="switchView('users')" class="text-[11px] font-bold text-[#5215b5] hover:underline mt-2 inline-block">Manage Users →</button>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#5215b5] flex items-center justify-center text-2xl">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-blue-600">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Orders</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-orders">0</h3>
+                            <button onclick="switchView('orders')" class="text-[11px] font-bold text-blue-600 hover:underline mt-2 inline-block">View Orders →</button>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-amber-500">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Pending Orders</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-pending-orders">0</h3>
+                            <button onclick="switchView('orders')" class="text-[11px] font-bold text-amber-600 hover:underline mt-2 inline-block">Process Queue →</button>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-emerald-500">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Pending Deposits</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-deposits">0</h3>
+                            <button onclick="switchView('deposits')" class="text-[11px] font-bold text-emerald-600 hover:underline mt-2 inline-block">Approve Deposits →</button>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-pink-600">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Completed Revenue</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-revenue">৳0</h3>
+                            <span class="text-[11px] font-semibold text-emerald-600 mt-2 inline-block">Verified Sales</span>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-2xl">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card flex items-center justify-between border-l-4 border-l-indigo-600">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Active Games</p>
+                            <h3 class="text-3xl font-extrabold text-slate-800 mt-1" id="dash-games">0</h3>
+                            <button onclick="switchView('services')" class="text-[11px] font-bold text-indigo-600 hover:underline mt-2 inline-block">Edit Services →</button>
+                        </div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div class="pixel-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                                <span class="w-2 h-5 bg-[#5215b5] rounded-full"></span> Latest Orders
+                            </h3>
+                            <button onclick="switchView('orders')" class="text-xs font-bold text-[#5215b5] hover:underline">See All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-slate-200 text-[11px] uppercase text-slate-400">
+                                        <th class="py-2.5">Customer</th>
+                                        <th class="py-2.5">Package</th>
+                                        <th class="py-2.5">Price</th>
+                                        <th class="py-2.5">Status</th>
+                                        <th class="py-2.5 text-right">Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dash-recent-orders" class="divide-y divide-slate-100 text-xs"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="pixel-card">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                                <span class="w-2 h-5 bg-emerald-500 rounded-full"></span> Recent Deposit Requests
+                            </h3>
+                            <button onclick="switchView('deposits')" class="text-xs font-bold text-[#5215b5] hover:underline">See All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-slate-200 text-[11px] uppercase text-slate-400">
+                                        <th class="py-2.5">User</th>
+                                        <th class="py-2.5">Method / TrxID</th>
+                                        <th class="py-2.5">Amount</th>
+                                        <th class="py-2.5 text-right">Quick Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dash-recent-deposits" class="divide-y divide-slate-100 text-xs"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-settings" class="view-section hidden space-y-6">
+                <!-- Admin Security & Password Change Card -->
+                <div class="pixel-card border-l-4 border-l-[#5215b5] bg-gradient-to-r from-purple-50/40 via-white to-white">
+                    <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-[#5215b5] flex items-center justify-center text-lg shadow-sm">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-slate-800">Admin Credentials & Security (পাসওয়ার্ড পরিবর্তন)</h3>
+                            <p class="text-xs text-slate-400">Update Admin Email and Password anytime from here</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1.5">Admin Login Email</label>
+                            <input type="email" id="set-admin-login-email" class="pixel-input font-medium" placeholder="Enter admin email">
+                            <p class="text-[11px] text-slate-400 mt-1">Used for signing into Admin Panel</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1.5">New Admin Password</label>
+                            <div class="relative">
+                                <input type="password" id="set-admin-login-pass" class="pixel-input pr-10 font-medium" placeholder="Enter new password (min 6 chars)">
+                                <button type="button" onclick="togglePassVisibility('set-admin-login-pass', this)" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-purple-600 transition">
+                                    <i class="fas fa-eye text-sm"></i>
+                                </button>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-1">Change your admin password anytime</p>
+                        </div>
+                    </div>
+                    <button onclick="saveAdminCredentials()" class="pixel-btn w-full py-3 text-sm font-bold shadow-md">
+                        <i class="fas fa-key mr-1.5"></i> Update Admin Password & Email
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div class="pixel-card">
+                        <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
+                            <div class="w-9 h-9 rounded-xl bg-purple-50 text-[#5215b5] flex items-center justify-center"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-800">General Storefront Info</h3>
+                                <p class="text-xs text-slate-400">Branding, notice & app download link</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Site Name</label><input type="text" id="set-sitename" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Logo URL (Direct Image Link)</label><input type="url" id="set-logo" class="pixel-input" placeholder="https://..."></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Scrolling Notice Text</label><textarea id="set-notice" class="pixel-input h-24"></textarea></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">App Download Link</label><input type="text" id="set-applink" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Admin Login Email (Opens Admin Panel from User Login)</label><input type="email" id="set-admin-email" class="pixel-input" placeholder="admin@example.com"></div>
+                        </div>
+                        <button onclick="saveSettings('general')" class="pixel-btn mt-5 w-full"><i class="fas fa-save"></i> Save General Info</button>
+                    </div>
+
+                    <div class="pixel-card">
+                        <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
+                            <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center"><i class="fas fa-share-alt"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-800">Social & Support Links</h3>
+                                <p class="text-xs text-slate-400">Helpline numbers and social channels</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">WhatsApp Number (with country code, e.g. 88017...)</label><input type="text" id="set-whatsapp" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Telegram Support / Channel Link</label><input type="text" id="set-telegram" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Facebook Page / Group Link</label><input type="text" id="set-facebook" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">YouTube Channel Link</label><input type="text" id="set-youtube" class="pixel-input"></div>
+                        </div>
+                        <button onclick="saveSettings('social')" class="pixel-btn mt-5 w-full"><i class="fas fa-save"></i> Save Social Links</button>
+                    </div>
+
+                    <div class="pixel-card">
+                        <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
+                            <div class="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-800">Payment Admin Numbers</h3>
+                                <p class="text-xs text-slate-400">Numbers displayed on user Add Money page</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">bKash Personal/Merchant Number</label><input type="text" id="set-bkash" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Nagad Personal/Merchant Number</label><input type="text" id="set-nagad" class="pixel-input"></div>
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">Rocket Personal/Merchant Number</label><input type="text" id="set-rocket" class="pixel-input"></div>
+                            <div class="pt-3 border-t border-slate-100 space-y-3">
+                                <p class="text-xs font-bold text-slate-500">Payment Icon Image URLs</p>
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">bKash Icon URL</label><input type="url" id="set-bkash-logo" class="pixel-input"></div>
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Nagad Icon URL</label><input type="url" id="set-nagad-logo" class="pixel-input"></div>
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Rocket Icon URL</label><input type="url" id="set-rocket-logo" class="pixel-input"></div>
+                            </div>
+                        </div>
+                        <button onclick="saveSettings('payment')" class="pixel-btn mt-5 w-full"><i class="fas fa-save"></i> Save Payment Numbers</button>
+                    </div>
+
+                    <div class="pixel-card">
+                        <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
+                            <div class="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center"><i class="fas fa-cogs"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-800">Advanced & Auto TopUp API</h3>
+                                <p class="text-xs text-slate-400">Promo banners, Auto Pay & API credentials</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div><label class="block text-xs font-bold text-slate-600 mb-1">How To Add Money (YouTube Video ID)</label><input type="text" id="set-tutorial-vid" class="pixel-input" placeholder="e.g. dQw4w9WgXcQ"></div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Player Name Check API URL (Use <code class="text-[#5215b5]">{uid}</code> or <code class="text-[#5215b5]">?uid=</code>)</label>
+                                <div class="flex gap-2">
+                                    <input type="url" id="set-uid-api" class="pixel-input flex-1" placeholder="https://your-api.com/name?uid={uid}">
+                                    <button type="button" onclick="testAdminUidApi()" class="pixel-btn-outline whitespace-nowrap px-3 py-2 text-xs font-bold">
+                                        <i class="fas fa-vial text-[#5215b5]"></i> Test API
+                                    </button>
+                                </div>
+                                <p class="text-[10px] text-slate-400 mt-1">Supports any JSON response containing <code class="text-slate-600">username</code>, <code class="text-slate-600">name</code>, <code class="text-slate-600">nickname</code>, or <code class="text-slate-600">player_name</code>.</p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-2">
+                                <label class="block text-xs font-extrabold text-[#5215b5]">
+                                    <i class="fas fa-thumbs-up mr-1"></i> Free Fire Like Auto-Delivery API URL
+                                </label>
+                                <div class="flex gap-2">
+                                    <input type="url" id="set-ff-like-api" class="pixel-input flex-1 bg-white" placeholder="https://api.demosite.top/api/ff-likes?api=KEY&uid={uid}&like={like}">
+                                    <button type="button" onclick="testAdminLikeApi()" class="pixel-btn-outline whitespace-nowrap px-3 py-2 text-xs font-bold bg-white">
+                                        <i class="fas fa-bolt text-[#5215b5]"></i> Test Like API
+                                    </button>
+                                </div>
+                                <p class="text-[10px] text-slate-500 leading-relaxed">
+                                    Supports formats like: <code class="text-[#5215b5] font-semibold">...ff-likes?api=KEY&amp;uid=123456789&amp;like=200</code> or <code class="text-[#5215b5] font-semibold">...like?uid=9811998438&amp;server_name=BD</code>. Automatically replaces <code class="text-slate-700">{uid}</code> / <code class="text-slate-700">uid=</code> and <code class="text-slate-700">{like}</code> / <code class="text-slate-700">like=</code> and delivers order automatically!
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Promo Image URL (Link)</label><input type="url" id="set-promo-img" class="pixel-input" placeholder="https://..."></div>
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Promo Target Link</label><input type="url" id="set-promo-link" class="pixel-input" placeholder="https://..."></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Favicon Image URL (Link)</label><input type="url" id="set-favicon-url" class="pixel-input" placeholder="https://..."></div>
+                                <div><label class="block text-xs font-bold text-slate-600 mb-1">Wallet Icon URL (Link)</label><input type="url" id="set-wallet-logo" class="pixel-input" placeholder="https://..."></div>
+                            </div>
+                            <div class="flex items-center justify-between p-3.5 bg-purple-50/70 rounded-xl border border-purple-200">
+                                <div>
+                                    <label for="set-autopay" class="text-sm font-bold text-slate-800 cursor-pointer block">Enable Auto Pay Flag</label>
+                                    <span class="text-[11px] text-slate-500">Stored directly in Firebase Realtime Database settings.</span>
+                                </div>
+                                <input type="checkbox" id="set-autopay" class="w-5 h-5 accent-[#5215b5] rounded cursor-pointer">
+                            </div>
+                        </div>
+                        <button onclick="saveSettings('advanced')" class="pixel-btn mt-5 w-full"><i class="fas fa-save"></i> Save Advanced Config</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-categories" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-plus-circle text-[#5215b5]"></i> Add New Category
+                    </h3>
+                    <div class="flex flex-col md:flex-row gap-3">
+                        <input type="text" id="cat-name" placeholder="Category Title (e.g. Regular Topup)" class="pixel-input flex-1">
+                        <input type="number" id="cat-slot" placeholder="Display Order Slot (e.g. 1)" class="pixel-input w-full md:w-52">
+                        <button onclick="addCategory()" class="pixel-btn whitespace-nowrap"><i class="fas fa-plus"></i> Add Category</button>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>SlotOrder</th><th>Category Name</th><th>Total Games</th><th class="w-44 text-center">Actions</th></tr></thead>
+                        <tbody id="cat-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-services" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-gamepad text-[#5215b5]"></i> Add New Game / Service
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Service / Game Name</label>
+                            <input type="text" id="srv-name" placeholder="e.g. UID Topup / Free Fire" class="pixel-input">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Game Thumbnail Image URL</label>
+                            <input type="text" id="srv-image" placeholder="https://..." class="pixel-input">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Select Category</label>
+                            <select id="srv-category" class="pixel-input">
+                                <option value="">Select Category</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Delivery System Type</label>
+                            <select id="srv-type" class="pixel-input">
+                                <option value="uid">UID TopUp (Manual Delivery)</option>
+                                <option value="code">Voucher Code (Instant Auto Code)</option>
+                                <option value="auto-topup">Auto TopUp (API Delivery)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Auto-Delivery / Like API URL (Optional - for FF Like or Auto TopUp)</label>
+                        <input type="url" id="srv-api-url" placeholder="https://api.demosite.top/api/ff-likes?api=KEY&uid={uid}&like={like}" class="pixel-input font-mono text-xs">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Rules & Conditions (One per line)</label>
+                        <textarea id="srv-rules" placeholder="সঠিক Player ID দিন..." class="pixel-input h-20"></textarea>
+                    </div>
+                    <button onclick="addService()" class="pixel-btn w-full"><i class="fas fa-plus"></i> Create Game / Service</button>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th class="w-20 text-center">Icon</th><th>Service Name</th><th>Category</th><th>Delivery Type</th><th class="w-64 text-center">Actions</th></tr></thead>
+                        <tbody id="srv-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-products" class="view-section hidden space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <button onclick="switchView('services')" class="pixel-btn-outline"><i class="fas fa-arrow-left"></i> Back to Services</button>
+                    <span class="text-xs font-bold px-3 py-1.5 rounded-full bg-purple-100 text-[#5215b5]" id="prod-service-badge">Service Packages</span>
+                </div>
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Manage Recharge Packages for: <span id="prod-service-name" class="text-[#5215b5]"></span></h3>
+                    <div class="flex flex-col md:flex-row gap-3">
+                        <input type="text" id="prod-name" placeholder="Package Name (e.g. 115 Diamonds)" class="pixel-input flex-1">
+                        <input type="number" id="prod-price" placeholder="Selling Price (৳)" class="pixel-input w-full md:w-48">
+                        <input type="url" id="prod-image" placeholder="Product image URL (optional)" class="pixel-input flex-1">
+                        <button onclick="addProduct()" class="pixel-btn whitespace-nowrap"><i class="fas fa-plus"></i> Add Package</button>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>Package</th><th>Price (৳)</th><th>Image</th><th>Available Stock</th><th class="w-64 text-center">Actions</th></tr></thead>
+                        <tbody id="prod-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-stock" class="view-section hidden space-y-6">
+                <button onclick="backToProductsView()" class="pixel-btn-outline"><i class="fas fa-arrow-left"></i> Back to Packages</button>
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Bulk Import Codes for: <span id="stock-prod-name" class="text-[#5215b5]"></span></h3>
+                    <textarea id="stock-codes" placeholder="Paste voucher or UniPin codes here (One code per line)" class="pixel-input h-40 mb-4 font-mono text-xs"></textarea>
+                    <button onclick="addStock()" class="pixel-btn w-full"><i class="fas fa-file-import"></i> Import Stock Codes</button>
+                </div>
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Available Stock Codes</h3>
+                    <div class="pixel-table-wrap">
+                        <table class="pixel-table">
+                            <thead><tr><th>Voucher / Redeem Code</th><th>Added Date</th><th class="w-40 text-center">Actions</th></tr></thead>
+                            <tbody id="stock-list"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-orders" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <div class="flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+                        <div class="relative flex-1">
+                            <input type="text" id="order-search" placeholder="Search by Player ID, Customer Name, Email or Package..." class="pixel-input pl-10" onkeyup="renderOrdersTable()">
+                            <i class="fas fa-search absolute left-3.5 top-3.5 text-slate-400"></i>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <select id="order-filter" class="pixel-input w-full sm:w-52" onchange="loadOrders()">
+                                <option value="all">All Statuses</option>
+                                <option value="pending">Pending</option>
+                                <option value="processing">Processing</option>
+                                <option value="success">Completed / Success</option>
+                                <option value="cancel">Canceled</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>Date</th><th>Customer</th><th>Game & Package</th><th>Player ID / Voucher Code</th><th>Price</th><th>Status</th><th class="w-40 text-center">Actions</th></tr></thead>
+                        <tbody id="order-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-deposits" class="view-section hidden space-y-6">
+                <div class="pixel-card flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4">
+                    <div class="relative flex-1">
+                        <input type="text" id="deposit-search" placeholder="Search by TrxID, User Email or Method..." class="pixel-input pl-10" onkeyup="renderDepositsTable()">
+                        <i class="fas fa-search absolute left-3.5 top-3.5 text-slate-400"></i>
+                    </div>
+                    <select id="deposit-filter" class="pixel-input w-full sm:w-48" onchange="renderDepositsTable()">
+                        <option value="all">All Requests</option>
+                        <option value="pending">Pending Only</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>Date</th><th>User Email</th><th>Method</th><th>TrxID</th><th>Amount</th><th>Status</th><th class="w-52 text-center">Actions</th></tr></thead>
+                        <tbody id="deposit-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-users" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <div class="flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4">
+                        <div class="relative flex-1">
+                            <input type="text" id="user-search" placeholder="Search users by Name, Email or Phone..." class="pixel-input pl-10" onkeyup="searchUsers()">
+                            <i class="fas fa-search absolute left-3.5 top-3.5 text-slate-400"></i>
+                        </div>
+                        <button onclick="openAddUserModal()" class="pixel-btn whitespace-nowrap"><i class="fas fa-user-plus"></i> Add New User</button>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>Joined</th><th>User Name</th><th>Email & Phone</th><th>Wallet Balance</th><th class="w-48 text-center">Actions</th></tr></thead>
+                        <tbody id="user-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-unpin" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Add New Unpin / Redeem Code</h3>
+                    <div class="flex flex-col md:flex-row gap-3">
+                        <input type="text" id="unpin-code" placeholder="Enter Unpin Code (e.g. UPBD-8899-XXXX)" class="pixel-input flex-1 font-mono">
+                        <button onclick="addUnpinCode()" class="pixel-btn whitespace-nowrap"><i class="fas fa-plus"></i> Add Unpin Code</button>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th>Unpin Code</th><th>Added Date</th><th class="w-44 text-center">Actions</th></tr></thead>
+                        <tbody id="unpin-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-tutorials" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Add Video Tutorial</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <input type="text" id="tut-title" placeholder="Tutorial Title" class="pixel-input">
+                        <input type="text" id="tut-link" placeholder="YouTube Video URL" class="pixel-input">
+                        <input type="text" id="tut-thumb" placeholder="Thumbnail Image URL" class="pixel-input">
+                    </div>
+                    <button onclick="addTutorial()" class="pixel-btn w-full"><i class="fas fa-plus"></i> Publish Tutorial</button>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th class="w-28 text-center">Thumbnail</th><th>Tutorial Title</th><th>Video Link</th><th class="w-44 text-center">Actions</th></tr></thead>
+                        <tbody id="tut-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <div id="view-banners" class="view-section hidden space-y-6">
+                <div class="pixel-card">
+                    <h3 class="text-base font-bold text-slate-800 mb-4">Add Homepage Slider Banner</h3>
+                    <div class="flex flex-col md:flex-row gap-3">
+                        <input type="text" id="ban-img" placeholder="Banner Image URL (16:9 recommended)" class="pixel-input flex-1">
+                        <button onclick="addBanner()" class="pixel-btn whitespace-nowrap"><i class="fas fa-plus"></i> Add Banner</button>
+                    </div>
+                </div>
+                <div class="pixel-table-wrap">
+                    <table class="pixel-table">
+                        <thead><tr><th class="w-40 text-center">Banner Preview</th><th>Image URL</th><th class="w-44 text-center">Actions</th></tr></thead>
+                        <tbody id="ban-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+            <footer class="pt-6 pb-4 text-center text-xs text-slate-400 border-t border-slate-200/80">
+                © 2026 <b>Pixel Topup</b> Admin Panel • All Rights Reserved • Developed by <a href="https://t.me/infinity_codex" target="_blank" class="font-bold text-[#5215b5] hover:underline">Unknown Hex</a>
+            </footer>
+        </div>
+    </main>
+
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+    <script>
+    // DEVELOP BY https://t.me/Infinity_Codex
+    // DEVELOP BY https://t.me/Infinity_Codex
+    </script>
+
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+<script>
+    // DEVELOP BY https://t.me/Infinity_Codex
+    // DEVELOP BY https://t.me/Infinity_Codex
+    const firebaseConfig = window.PIXEL_FIREBASE_CONFIG;
+    if (!window.pixelFirebaseConfigReady(firebaseConfig)) {
+        window.showPixelFirebaseSetupNotice();
+        throw new Error('Check the inline Firebase Web config before using the admin panel.');
+    }
+    if (!firebaseConfig.databaseURL && firebaseConfig.projectId) {
+        firebaseConfig.databaseURL = `https://${firebaseConfig.projectId}-default-rtdb.firebaseio.com`;
+    }
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const auth = firebase.auth();
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function isAdminUser(user) {
+        if (!user) return false;
+        try {
+            const adminsSnap = await db.ref('admins').once('value');
+            if (!adminsSnap.exists() || !adminsSnap.val() || Object.keys(adminsSnap.val()).length === 0) {
+                // First email/password user logging into Admin Panel becomes admin automatically
+                await db.ref('admins/' + user.uid).set({
+                    email: user.email || '',
+                    name: user.displayName || 'Admin',
+                    role: 'admin',
+                    addedAt: Date.now()
+                });
+                if (user.email) {
+                    await db.ref('admin/email').set(user.email);
+                }
+                return true;
+            }
+            const adminsObj = adminsSnap.val() || {};
+            if (adminsObj[user.uid]) return true;
+            const matchedByEmail = Object.values(adminsObj).some(a =>
+                a && typeof a === 'object' && a.email && user.email &&
+                String(a.email).toLowerCase() === String(user.email).toLowerCase()
+            );
+            if (matchedByEmail) return true;
+
+            const adminEmailSnap = await db.ref('admin/email').once('value');
+            if (adminEmailSnap.exists() && adminEmailSnap.val() && user.email) {
+                if (String(adminEmailSnap.val()).trim().toLowerCase() === String(user.email).trim().toLowerCase()) {
+                    await db.ref('admins/' + user.uid).set({
+                        email: user.email,
+                        name: user.displayName || 'Admin',
+                        role: 'admin',
+                        addedAt: Date.now()
+                    });
+                    return true;
+                }
+            }
+
+            const roleSnap = await db.ref('users/' + user.uid + '/role').once('value');
+            return roleSnap.val() === 'admin';
+        } catch (error) {
+            console.error('Admin role check failed:', error);
+            return false;
+        }
+    }
+
+    let currentServiceId = null;
+    let currentServiceName = "";
+    let currentServiceType = "uid";
+    let currentProductId = null;
+    let currentProductName = "";
+
+    let categoriesMap = {};
+    let servicesMap = {};
+    let productsMap = {};
+    let stockMap = {};
+    let ordersMap = {};
+    let depositsMap = {};
+    let usersMap = {};
+    let unpinMap = {};
+    let tutorialsMap = {};
+    let bannersMap = {};
+
+    let activeProductsRef = null;
+    let activeStockRef = null;
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function escapeHtml(str) {
+        return String(str ?? "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function parseDateMs(d) {
+        if (!d) return 0;
+        if (typeof d === "number") return d;
+        if (typeof d.toDate === "function") return d.toDate().getTime();
+        const t = new Date(d).getTime();
+        return isNaN(t) ? 0 : t;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function formatDateVal(d) {
+        const ms = parseDateMs(d);
+        if (!ms) return "N/A";
+        return new Date(ms).toLocaleString();
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function slugifyId(text, prefix = 'item') {
+        const slug = String(text || '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        return slug || (prefix + '_' + Date.now());
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function showLoading() { document.getElementById('loading-spinner').style.display = 'flex'; }
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function hideLoading() { document.getElementById('loading-spinner').style.display = 'none'; }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditModal(title, bodyHtml, onSave) {
+        document.getElementById('edit-modal-title').innerText = title;
+        document.getElementById('edit-modal-body').innerHTML = bodyHtml;
+        const modal = document.getElementById('edit-modal-backdrop');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        const saveBtn = document.getElementById('edit-modal-save-btn');
+        saveBtn.onclick = onSave;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function closeEditModal() {
+        const modal = document.getElementById('edit-modal-backdrop');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+        sidebar.classList.toggle('-translate-x-full');
+        backdrop.classList.toggle('hidden');
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    const DEFAULT_SEED_DATA = {"settings": {"general": {"siteName": "Pixel Topup", "notice": "স্বাগতম Pixel Topup-এ", "autoPayEnabled": false, "playerNameCheckApiUrl": "https://tyno-ffinfo.tzsm.workers.dev/name?uid={uid}", "logoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d", "promoImageUrl": "", "promoImageLink": "", "walletLogoUrl": "https://host.tscv.workers.dev/img/5ae86a6923a84f3f", "autoPayLogoUrl": "https://host.tscv.workers.dev/img/ee9737f984c641b1", "faviconUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d", "footerThumbnailUrl": "https://host.tscv.workers.dev/img/4daab908e40648aa", "homeNoticeImageUrl": "https://host.tscv.workers.dev/img/9d1d911cea6547ff", "bannerUrls": ["https://host.tscv.workers.dev/img/e229f70e005d447d", "https://host.tscv.workers.dev/img/fff831fd629940dc"], "headerLogoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d", "aboutLogoUrl": "https://host.tscv.workers.dev/img/03506b2a447b460d", "bKashLogoUrl": "https://images.seeklogo.com/logo-png/27/1/bkash-logo-png_seeklogo-273684.png", "NagadLogoUrl": "https://images.seeklogo.com/logo-png/35/1/nagad-logo-png_seeklogo-356936.png", "RocketLogoUrl": "https://images.seeklogo.com/logo-png/31/1/dutch-bangla-rocket-logo-png_seeklogo-317692.png", "autoPayImageUrl": "https://host.tscv.workers.dev/img/ee9737f984c641b1", "whatsapp": "8801700000000", "telegram": "https://t.me/PixelTopup", "facebook": "https://facebook.com", "youtube": "https://youtube.com", "appLink": "#"}, "videos": {"howToAddMoney": "dQw4w9WgXcQ"}}, "admin": {"payment": {"number": "01700000000", "method": "bKash", "bKash": "01700000000", "bkash": "01700000000", "Nagad": "01700000000", "nagad": "01700000000", "Rocket": "01700000000", "rocket": "01700000000"}}, "categories": {"mobile": {"name": "Mobile Games & Offers", "slot": 1}}, "banners": {"banner_1": {"image": "https://host.tscv.workers.dev/img/e229f70e005d447d", "slot": 1}, "banner_2": {"image": "https://host.tscv.workers.dev/img/fff831fd629940dc", "slot": 2}}, "services": {"freefire": {"products": {"706": {"name": "25 Diamond", "price": 20, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "707": {"name": "50 Diamond", "price": 35, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "660": {"name": "115 Diamond", "price": 79, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "661": {"name": "240 Diamond", "price": 158, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "662": {"name": "355 Diamond", "price": 237, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "718": {"name": "480 Diamond", "price": 316, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "663": {"name": "610 Diamond", "price": 400, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "664": {"name": "850 Diamond", "price": 558, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "665": {"name": "1090 Diamond", "price": 716, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "666": {"name": "1240 Diamond", "price": 800, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "667": {"name": "1850 Diamond", "price": 1200, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "668": {"name": "2530 Diamond", "price": 1610, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "669": {"name": "3140 Diamond", "price": 2000, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "670": {"name": "5060 Diamond", "price": 3220, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "671": {"name": "10120 Diamond", "price": 6400, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "672": {"name": "Weekly", "price": 158, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "749": {"name": "Weekly Lite", "price": 40, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "673": {"name": "Monthly", "price": 780, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}}, "name": "Free Fire", "categoryId": "mobile", "type": "uid", "rules": "শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\nPlayer ID Code সঠিকভাবে দিন।\nঅর্ডার কমপ্লিট হওয়ার পর ডায়মন্ড না এলে support-এ যোগাযোগ করুন।", "image": "https://host.tscv.workers.dev/img/025f7f7611ff49e7", "icon": "https://host.tscv.workers.dev/img/025f7f7611ff49e7"}, "unipin-voucher": {"products": {"57": {"name": "25 Daimon pin", "price": 22, "stockCount": 4, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "16": {"name": "50 Diamond Pin", "price": 37, "stockCount": 23, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "17": {"name": "115 Diamond Pin", "price": 78, "stockCount": 30, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "18": {"name": "240 Diamond Pin", "price": 158, "stockCount": 22, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "19": {"name": "610 Diamond Pin", "price": 400, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "20": {"name": "1240 Diamond Pin", "price": 800, "stockCount": 2, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "21": {"name": "2530 Diamond Pin", "price": 1590, "stockCount": 3, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "22": {"name": "Weekly Pin", "price": 158, "stockCount": 20, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "23": {"name": "Monthly Pin", "price": 780, "stockCount": 6, "imageUrl": "https://host.tscv.workers.dev/img/1f84f36601c94303"}}, "name": "UNIPIN VOUCHER BD", "categoryId": "mobile", "type": "code", "rules": "কিভাবে ইউনিপিন ভাউচার দিয়ে টপআপ করবেন ??\n\n\n⦿ প্রথমে কত ডায়মন্ড নিতে চান সে অনুযায়ী Unipin Voucher পিন সিলেক্ট করুন ।\n\n⦿ পিন পাওয়ার পর shop.garena.my ওয়েবসাইটে যান ।\n\n⦿ FF অপশনে গিয়ে আপনার Player ID দিয়ে লগিন করুন ।\n\n⦿ এরপর Proccess to Payment ক্লিক করে কত ডায়মন্ড টপআপ করতে চান সেটা সিলেক্ট করে পিন দিয়ে Purchase করে নিন ।\n\n \n\n\nHow to Topup with Unipin Voucher ??\n\n\n⦿ First select the Unipin Voucher Pin according to how many diamonds you want to buy.\n\n⦿ Go to shop.garena.my website after receiving PIN.\n\n⦿ Go to FF option and login with your Player ID.\n\n⦿ Then click Process to Payment, select how many diamonds you want to top up and purchase with PIN.", "image": "https://host.tscv.workers.dev/img/1f84f36601c94303", "icon": "https://host.tscv.workers.dev/img/1f84f36601c94303"}, "weekly-monthly": {"products": {"629": {"name": "Weekly", "price": 158, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "630": {"name": "2X Weekly", "price": 316, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "631": {"name": "3X Weekly", "price": 474, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "632": {"name": "5X Weekly", "price": 790, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "634": {"name": "Monthly", "price": 780, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "635": {"name": "2X Monthly", "price": 1580, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "768": {"name": "5X Monthly", "price": 3900, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "769": {"name": "10X Monthly", "price": 7800, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "638": {"name": "1Weekly + 1Monthly", "price": 940, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "639": {"name": "4Weekly + 1Monthly", "price": 1410, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}}, "name": "WEEKLY MONTHLY OFFER", "categoryId": "mobile", "type": "uid", "rules": "⦿ শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয় ।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য ID Pass দিতে হবে।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।", "image": "https://host.tscv.workers.dev/img/2f8a5b55978741ea", "icon": "https://host.tscv.workers.dev/img/2f8a5b55978741ea"}, "weekly-lite": {"products": {"744": {"name": "1x Weekly Lite", "price": 40, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}, "745": {"name": "2x Weekly Lite", "price": 80, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}, "746": {"name": "3x Weekly Lite", "price": 120, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}, "747": {"name": "5x Weekly Lite", "price": 200, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}, "748": {"name": "10x Weekly Lite", "price": 400, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}}, "name": "WEEKLY LITE BD", "categoryId": "mobile", "type": "uid", "rules": "⦿ শুধুমাত্র Bangladesh সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID Code ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয়।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য আইডি পাসওয়ার্ড দিতে হবে ।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।", "image": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7", "icon": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7"}, "level-up-pass": {"products": {"771": {"name": "6 level (120 Diamond)", "price": 40, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "772": {"name": "10 level (200 Diamond)", "price": 75, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "773": {"name": "15 level (200 Diamond)", "price": 75, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "774": {"name": "20 level (200 Diamond)", "price": 75, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "775": {"name": "25 level (200 Diamond)", "price": 75, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "776": {"name": "30 level (200 Diamond)", "price": 105, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "777": {"name": "Level Up Pass Full (1270 Diamond)", "price": 445, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}}, "name": "Level Up Pass", "categoryId": "mobile", "type": "uid", "rules": "null", "image": "https://host.tscv.workers.dev/img/4a5940cb702840cf", "icon": "https://host.tscv.workers.dev/img/4a5940cb702840cf"}, "freefire-like": {"products": {"826": {"name": "200 Likes ⇨ Instant Delivery", "price": 25, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "827": {"name": "400 Likes ⇨ 2 Days Package", "price": 50, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "828": {"name": "600 Likes ⇨ 3 Days Package", "price": 75, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "829": {"name": "1400 Likes ⇨ 7 Days Package", "price": 170, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "830": {"name": "3000 Likes ⇨ 15 Days Package", "price": 370, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "831": {"name": "6000 Likes ⇨ 1 Month Package", "price": 730, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "832": {"name": "12000 Likes ⇨ 2 Month Package", "price": 1450, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "833": {"name": "18000 Likes ⇨ 3 Month Package", "price": 2180, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "834": {"name": "36000 Likes ⇨ 6 Month Package", "price": 4400, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "835": {"name": "73000 Likes ⇨ 1 Year Package", "price": 8900, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}}, "name": "FF Like👍", "categoryId": "mobile", "type": "uid", "rules": "📢 অর্ডার করার আগে ভালোভাবে পড়ে নিন!\n\n \n\n✅ এক আইডিতে প্রতিদিন একবার অর্ডার করতে পারবেন।\n\n \n\n❌ একই দিনে একই আইডিতে বারবার অর্ডার করলে টাকা ফেরত দেওয়া হবে না।\n\n \n\n━━━━━━━━━━━━━━━━━━━━\n\n \n\n👍 Likes", "image": "https://host.tscv.workers.dev/img/a8be29d5a2c64979", "icon": "https://host.tscv.workers.dev/img/a8be29d5a2c64979"}, "indonesia-topup": {"products": {"709": {"name": "50 Diamond", "price": 65, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "710": {"name": "70 Diamond", "price": 90, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "711": {"name": "140 Diamond", "price": 180, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "712": {"name": "355 Diamond", "price": 445, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "713": {"name": "720 Diamond", "price": 890, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "714": {"name": "Weekly", "price": 255, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "715": {"name": "Monthly", "price": 800, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "717": {"name": "Bp Card", "price": 410, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/141a8737b5564319"}}, "name": "INDONESIA TOPUP", "categoryId": "mobile", "type": "uid", "rules": "⦿ শুধুমাত্র Indonesia সার্ভারে ID Code দিয়ে টপ আপ হবে।\n\n \n\n⦿ Player ID Code ভুল দিয়ে Diamond না পেলে Pixel Topup কর্তৃপক্ষ দায়ী নয়।\n\n \n\n⦿ Order কমপ্লিট হওয়ার পরেও আইডিতে ডাইমন্ড না গেলে চেক করার জন্য আইডি পাসওয়ার্ড দিতে হবে ।\n\n \n\n⦿ অর্ডার Cancel হলে কি কারণে তা Cancel হয়েছে তা অর্ডার হিস্টোরিতে দেওয়া থাকে অনুগ্রহ পুর্বক দেখে পুনরায় সঠিক তথ্য দিয়ে অর্ডার করবেন।", "image": "https://host.tscv.workers.dev/img/141a8737b5564319", "icon": "https://host.tscv.workers.dev/img/141a8737b5564319"}, "premium-user": {"products": {"819": {"name": "115 Diamond", "price": 77, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "820": {"name": "240 Diamond", "price": 155, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "821": {"name": "610 Diamond", "price": 390, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "822": {"name": "1240 Diamond", "price": 785, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "823": {"name": "2530 Diamond", "price": 1580, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "824": {"name": "Weekly", "price": 156, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}, "825": {"name": "Monthly", "price": 770, "stockCount": 1, "imageUrl": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}}, "name": "Premium User", "categoryId": "mobile", "type": "uid", "rules": "যেসব গ্রাহক Pixel Topup থেকে মোট 20,000 টাকা বা তার বেশি মূল্যের পণ্য ক্রয় করেছেন, তারা Premium Users অফারটি পাওয়ার যোগ্য হবেন। নির্ধারিত পরিমাণ টাকার টপ-আপ সম্পন্ন হলে, আপনি পরবর্তী টপ-আপে ডিসকাউন্ট উপভোগ করতে পারবেন।\n\n \n\n\n✨ অফারের বিস্তারিত:\n\n\n \n\n✔ শুধুমাত্র বিশ্বস্ত গ্রাহকদের জন্য প্রিমিয়াম পুরস্কার\n\n \n\n✔ আমাদের থেকে মোট ৳20,000+ টাকার কেনাকাটা থাকতে হবে\n\n \n\n✔ পরবর্তী টপ-আপে ডিসকাউন্ট প্রযোজ্য হবে\n\n \n\n✔ একজন গ্রাহক ২৪ ঘন্টার মধ্যে যেকোনো সর্বোচ্চ ২টি প্যাকেজ অর্ডার করতে পারবেন", "image": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4", "icon": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4"}}, "assets": {"site_logo": {"name": "site_logo", "url": "https://host.tscv.workers.dev/img/11a5c0c5f4904db7", "provider": "host.tscv.workers.dev"}, "wallet_logo": {"name": "wallet_logo", "url": "https://host.tscv.workers.dev/img/5ae86a6923a84f3f", "provider": "host.tscv.workers.dev"}, "autopay_logo": {"name": "autopay_logo", "url": "https://host.tscv.workers.dev/img/ee9737f984c641b1", "provider": "host.tscv.workers.dev"}, "favicon": {"name": "favicon", "url": "https://host.tscv.workers.dev/img/03506b2a447b460d", "provider": "host.tscv.workers.dev"}, "icon_192": {"name": "icon_192", "url": "https://host.tscv.workers.dev/img/dae8b13d3e464f64", "provider": "host.tscv.workers.dev"}, "icon_512": {"name": "icon_512", "url": "https://host.tscv.workers.dev/img/8612f0822cf54725", "provider": "host.tscv.workers.dev"}, "footer_thumbnail": {"name": "footer_thumbnail", "url": "https://host.tscv.workers.dev/img/4daab908e40648aa", "provider": "host.tscv.workers.dev"}, "home_notice": {"name": "home_notice", "url": "https://host.tscv.workers.dev/img/9d1d911cea6547ff", "provider": "host.tscv.workers.dev"}, "banner_1": {"name": "banner_1", "url": "https://host.tscv.workers.dev/img/e229f70e005d447d", "provider": "host.tscv.workers.dev"}, "banner_2": {"name": "banner_2", "url": "https://host.tscv.workers.dev/img/fff831fd629940dc", "provider": "host.tscv.workers.dev"}, "freefire_product": {"name": "freefire_product", "url": "https://host.tscv.workers.dev/img/025f7f7611ff49e7", "provider": "host.tscv.workers.dev"}, "unipin-voucher_product": {"name": "unipin-voucher_product", "url": "https://host.tscv.workers.dev/img/1f84f36601c94303", "provider": "host.tscv.workers.dev"}, "weekly-monthly_product": {"name": "weekly-monthly_product", "url": "https://host.tscv.workers.dev/img/2f8a5b55978741ea", "provider": "host.tscv.workers.dev"}, "weekly-lite_product": {"name": "weekly-lite_product", "url": "https://host.tscv.workers.dev/img/aba6c2ec7dff4ff7", "provider": "host.tscv.workers.dev"}, "level-up-pass_product": {"name": "level-up-pass_product", "url": "https://host.tscv.workers.dev/img/4a5940cb702840cf", "provider": "host.tscv.workers.dev"}, "freefire-like_product": {"name": "freefire-like_product", "url": "https://host.tscv.workers.dev/img/a8be29d5a2c64979", "provider": "host.tscv.workers.dev"}, "indonesia-topup_product": {"name": "indonesia-topup_product", "url": "https://host.tscv.workers.dev/img/141a8737b5564319", "provider": "host.tscv.workers.dev"}, "premium-user_product": {"name": "premium-user_product", "url": "https://host.tscv.workers.dev/img/1fb38e37e9d647b4", "provider": "host.tscv.workers.dev"}, "pixel_topup_logo": {"name": "pixel_topup_logo", "url": "https://host.tscv.workers.dev/img/9bc4cd3f5a7c45cf", "provider": "host.tscv.workers.dev"}, "pixel_topup_logo_header": {"name": "pixel_topup_logo_header", "url": "https://host.tscv.workers.dev/img/03506b2a447b460d", "provider": "host.tscv.workers.dev"}, "bKashLogoUrl": {"name": "bKashLogoUrl", "url": "https://images.seeklogo.com/logo-png/27/1/bkash-logo-png_seeklogo-273684.png", "provider": "seeklogo.com"}, "NagadLogoUrl": {"name": "NagadLogoUrl", "url": "https://images.seeklogo.com/logo-png/35/1/nagad-logo-png_seeklogo-356936.png", "provider": "seeklogo.com"}, "RocketLogoUrl": {"name": "RocketLogoUrl", "url": "https://images.seeklogo.com/logo-png/31/1/dutch-bangla-rocket-logo-png_seeklogo-317692.png", "provider": "seeklogo.com"}, "autoPayImageUrl": {"name": "autoPayImageUrl", "url": "https://host.tscv.workers.dev/img/ee9737f984c641b1", "provider": "host.tscv.workers.dev"}}};
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function importDefaultSeedData() {
+        const confirmRes = await Swal.fire({
+            title: 'Import Default Seed Data?',
+            text: 'This will import the default Pixel Topup games, packages, categories, banners, and settings into Firebase Realtime Database.',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#5215b5',
+            confirmButtonText: 'Yes, Import Now'
+        });
+        if (!confirmRes.isConfirmed) return;
+        showLoading();
+        try {
+            await db.ref().update(DEFAULT_SEED_DATA);
+            hideLoading();
+            loadCategories();
+            loadServices();
+            loadDashboardData();
+            Swal.fire('Imported!', 'Default Pixel Topup data has been imported into Realtime Database.', 'success');
+        } catch (err) {
+            hideLoading();
+            Swal.fire('Import Failed', err.message, 'error');
+        }
+    }
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function enterAdminWorkspace() {
+        document.getElementById('login-modal').style.display = 'none';
+        document.getElementById('sidebar').classList.remove('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+        loadCategories();
+        loadServices();
+        loadDashboardData();
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    auth.onAuthStateChanged(async (user) => {
+        hideLoading();
+        if (user && await isAdminUser(user)) {
+            enterAdminWorkspace();
+        } else if (user) {
+            await auth.signOut();
+            Swal.fire('Access Denied', 'This account does not have Admin permissions.', 'error');
+            document.getElementById('login-modal').style.display = 'flex';
+            document.getElementById('sidebar').classList.add('hidden');
+            document.getElementById('main-content').classList.add('hidden');
+        } else {
+            document.getElementById('login-modal').style.display = 'flex';
+            document.getElementById('sidebar').classList.add('hidden');
+            document.getElementById('main-content').classList.add('hidden');
+        }
+    });
+
+
+    const DEFAULT_ADMIN_EMAIL = "admin@gmail.com";
+    const DEFAULT_ADMIN_PASS = "admin@123";
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function togglePassVisibility(inputId, btn) {
+        const input = document.getElementById(inputId);
+        if (!input) return;
+        const icon = btn ? btn.querySelector('i') : null;
+        if (input.type === 'password') {
+            input.type = 'text';
+            if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
+        } else {
+            input.type = 'password';
+            if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function checkIsAdminCredentials(email, pass) {
+        const normEmail = String(email || '').trim().toLowerCase();
+        if (normEmail === DEFAULT_ADMIN_EMAIL.toLowerCase() && pass === DEFAULT_ADMIN_PASS) {
+            return true;
+        }
+        try {
+            const credSnap = await db.ref('admin/credentials').once('value');
+            if (credSnap.exists() && credSnap.val()) {
+                const cred = credSnap.val();
+                const savedEmail = String(cred.email || DEFAULT_ADMIN_EMAIL).trim().toLowerCase();
+                const savedPass = String(cred.password || DEFAULT_ADMIN_PASS);
+                if (normEmail === savedEmail && pass === savedPass) return true;
+            }
+            const emailSnap = await db.ref('admin/email').once('value');
+            const passSnap = await db.ref('admin/password').once('value');
+            if (passSnap.exists() && passSnap.val()) {
+                const savedPass = String(passSnap.val());
+                const savedEmail = emailSnap.exists() && emailSnap.val() ? String(emailSnap.val()).trim().toLowerCase() : DEFAULT_ADMIN_EMAIL;
+                if (normEmail === savedEmail && pass === savedPass) return true;
+            }
+        } catch (e) {
+            console.warn('Error reading admin credentials:', e);
+        }
+        return false;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function saveAdminCredentials() {
+        const emailInput = document.getElementById('set-admin-login-email');
+        const passInput = document.getElementById('set-admin-login-pass');
+        const email = emailInput ? emailInput.value.trim() : '';
+        const pass = passInput ? passInput.value.trim() : '';
+
+        if (!email || !pass) {
+            return Swal.fire('Required Fields', 'Please enter both Admin Email and Password', 'warning');
+        }
+        if (pass.length < 6) {
+            return Swal.fire('Weak Password', 'Password must be at least 6 characters long', 'warning');
+        }
+
+        showLoading();
+        try {
+            if (auth.currentUser) {
+                try {
+                    await auth.currentUser.updatePassword(pass);
+                } catch (pwErr) {
+                    console.log('Firebase user updatePassword note:', pwErr);
+                }
+                if (auth.currentUser.email && auth.currentUser.email.toLowerCase() !== email.toLowerCase()) {
+                    try {
+                        await auth.currentUser.updateEmail(email);
+                    } catch (emErr) {
+                        console.log('Firebase user updateEmail note:', emErr);
+                    }
+                }
+            }
+
+            await db.ref('admin/credentials').set({
+                email: email,
+                password: pass,
+                updatedAt: Date.now()
+            });
+            await db.ref('admin/email').set(email);
+            await db.ref('admin/password').set(pass);
+
+            if (auth.currentUser) {
+                await db.ref('admins/' + auth.currentUser.uid).update({
+                    email: email,
+                    role: 'admin',
+                    updatedAt: Date.now()
+                });
+            }
+
+            hideLoading();
+            Swal.fire({
+                title: 'Credentials Saved!',
+                html: '<div class="text-left bg-purple-50 p-3 rounded-xl border border-purple-100 text-xs text-slate-700">' +
+                      '<p class="mb-1"><b>Admin Email:</b> ' + escapeHtml(email) + '</p>' +
+                      '<p><b>Password:</b> ' + escapeHtml(pass) + '</p></div>' +
+                      '<p class="text-xs text-slate-500 mt-2">পাসওয়ার্ড ও ইমেইল সফলভাবে আপডেট করা হয়েছে। পরবর্তী লগইনে এই তথ্য ব্যবহার করবেন।</p>',
+                icon: 'success',
+                confirmButtonColor: '#5215b5'
+            });
+        } catch (err) {
+            hideLoading();
+            Swal.fire('Update Failed', err.message, 'error');
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function loginAdmin() {
+        const emailInput = document.getElementById('admin-email');
+        const passInput = document.getElementById('admin-password');
+        const email = emailInput ? emailInput.value.trim() : '';
+        const pass = passInput ? passInput.value.trim() : '';
+        if (!email || !pass) {
+            Swal.fire('Required', 'Please enter both email and password', 'warning');
+            return;
+        }
+        showLoading();
+
+        const isMatched = await checkIsAdminCredentials(email, pass);
+
+        try {
+            await auth.signInWithEmailAndPassword(email, pass);
+            hideLoading();
+        } catch (err) {
+            console.log('Firebase sign in failed:', err.code, err.message);
+            if (isMatched) {
+                try {
+                    const newCred = await auth.createUserWithEmailAndPassword(email, pass);
+                    const uid = newCred.user.uid;
+                    await db.ref('admins/' + uid).set({
+                        email: email,
+                        name: 'Admin',
+                        role: 'admin',
+                        addedAt: Date.now()
+                    });
+                    await db.ref('admin/email').set(email);
+                    await db.ref('admin/credentials').set({
+                        email: email,
+                        password: pass,
+                        updatedAt: Date.now()
+                    });
+                    hideLoading();
+                    enterAdminWorkspace();
+                    return;
+                } catch (cErr) {
+                    console.log('Auto-create in auth failed:', cErr.code);
+                    hideLoading();
+                    enterAdminWorkspace();
+                    return;
+                }
+            }
+            hideLoading();
+            Swal.fire('Login Failed', err.message || 'Incorrect admin email or password.', 'error');
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function logoutAdmin() {
+        auth.signOut();
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function switchView(viewId, param1 = null, param2 = null, param3 = null) {
+        document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+
+        const viewEl = document.getElementById('view-' + viewId);
+        if (viewEl) viewEl.classList.remove('hidden');
+
+        const navKey = (viewId === 'products' || viewId === 'stock') ? 'services' : viewId;
+        const navEl = document.getElementById('nav-' + navKey);
+        if (navEl) navEl.classList.add('active');
+
+        if (window.innerWidth < 1024) {
+            document.getElementById('sidebar').classList.add('-translate-x-full');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            if (backdrop) backdrop.classList.add('hidden');
+        }
+
+        const titles = {
+            dashboard: "Dashboard Overview",
+            settings: "Storefront & API Settings",
+            categories: "Category Management",
+            services: "Services & Games Management",
+            products: "Recharge Package Management",
+            stock: "Voucher & Stock Codes",
+            orders: "Customer Orders Management",
+            deposits: "Wallet Deposit Requests",
+            users: "Registered Users Management",
+            unpin: "Unpin Code Vault",
+            tutorials: "Video Tutorials",
+            banners: "Homepage Slider Banners"
+        };
+
+        document.getElementById('page-title').innerText = titles[viewId] || "Pixel Admin";
+        document.getElementById('page-desc').innerText = `Full Create, Edit & Delete access for ${titles[viewId] || viewId}`;
+
+        if (viewId === 'dashboard') loadDashboardData();
+        if (viewId === 'settings') loadSettings();
+        if (viewId === 'categories') loadCategories();
+        if (viewId === 'services') { loadCategories(); loadServices(); }
+        if (viewId === 'products') {
+            if (param1) {
+                currentServiceId = param1;
+                currentServiceName = param2;
+                currentServiceType = param3;
+            }
+            document.getElementById('prod-service-name').innerText = currentServiceName;
+            document.getElementById('prod-service-badge').innerText = `Type: ${String(currentServiceType).toUpperCase()}`;
+            loadProducts();
+        }
+        if (viewId === 'stock') {
+            if (param1) {
+                currentProductId = param1;
+                currentProductName = param2;
+            }
+            document.getElementById('stock-prod-name').innerText = currentProductName;
+            loadStock();
+        }
+        if (viewId === 'orders') loadOrders();
+        if (viewId === 'deposits') loadDeposits();
+        if (viewId === 'users') loadUsers();
+        if (viewId === 'unpin') loadUnpinCodes();
+        if (viewId === 'tutorials') loadTutorials();
+        if (viewId === 'banners') loadBanners();
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function backToProductsView() {
+        switchView('products', currentServiceId, currentServiceName, currentServiceType);
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadDashboardData() {
+        db.ref('users').on('value', snap => {
+            const val = snap.val() || {};
+            document.getElementById('dash-users').innerText = Object.keys(val).length;
+        });
+
+        db.ref('services').on('value', snap => {
+            const val = snap.val() || {};
+            document.getElementById('dash-games').innerText = Object.keys(val).length;
+        });
+
+        db.ref('orders').on('value', snap => {
+            const raw = snap.val() || {};
+            const allOrds = Object.entries(raw)
+                .map(([id, o]) => ({ id, ...(o || {}) }))
+                .sort((a, b) => parseDateMs(b.date) - parseDateMs(a.date));
+
+            document.getElementById('dash-orders').innerText = allOrds.length;
+            let rev = 0;
+            let pendingCount = 0;
+            ordersMap = {};
+            allOrds.forEach(data => {
+                ordersMap[data.id] = data;
+                if (data.status === 'success' || data.status === 'completed') rev += parseInt(data.price || 0);
+                if (data.status === 'pending' || data.status === 'processing') pendingCount++;
+            });
+
+            document.getElementById('dash-revenue').innerText = '৳' + rev;
+            document.getElementById('dash-pending-orders').innerText = pendingCount;
+            document.getElementById('sidebar-pending-orders').innerText = pendingCount;
+
+            db.ref('deposits').once('value').then(depSnap => {
+                const rawDeps = depSnap.val() || {};
+                const allDeps = Object.entries(rawDeps)
+                    .map(([id, d]) => ({ id, ...(d || {}) }))
+                    .sort((a, b) => parseDateMs(b.date) - parseDateMs(a.date));
+
+                let pendingDeps = 0;
+                depositsMap = {};
+                allDeps.forEach(d => {
+                    depositsMap[d.id] = d;
+                    if (d.status === 'pending') pendingDeps++;
+                });
+                document.getElementById('dash-deposits').innerText = pendingDeps;
+                document.getElementById('sidebar-pending-deposits').innerText = pendingDeps;
+                renderDashboardTables(allOrds.slice(0, 5), allDeps.slice(0, 5));
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderDashboardTables(recentOrds, recentDeps) {
+        const ordTbody = document.getElementById('dash-recent-orders');
+        ordTbody.innerHTML = '';
+        if (recentOrds.length === 0) {
+            ordTbody.innerHTML = `<tr><td colspan="5" class="py-4 text-center text-slate-400">No recent orders</td></tr>`;
+        } else {
+            recentOrds.forEach(o => {
+                const badge = (o.status === 'success' || o.status === 'completed')
+                    ? `<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px]">Success</span>`
+                    : (o.status === 'cancel' ? `<span class="px-2 py-0.5 rounded-full bg-red-50 text-red-600 font-bold text-[10px]">Canceled</span>` : `<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 font-bold text-[10px]">Pending</span>`);
+                ordTbody.innerHTML += `
+                    <tr>
+                        <td class="py-2.5 font-semibold text-slate-800">${escapeHtml(o.userName || o.userEmail)}</td>
+                        <td class="py-2.5 text-slate-600">${escapeHtml(o.productName)}</td>
+                        <td class="py-2.5 font-bold text-[#5215b5]">৳${escapeHtml(o.price)}</td>
+                        <td class="py-2.5">${badge}</td>
+                        <td class="py-2.5 text-right">
+                            <button onclick="openEditOrderModal('${escapeHtml(o.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i></button>
+                        </td>
+                    </tr>`;
+            });
+        }
+
+        const depTbody = document.getElementById('dash-recent-deposits');
+        depTbody.innerHTML = '';
+        if (recentDeps.length === 0) {
+            depTbody.innerHTML = `<tr><td colspan="4" class="py-4 text-center text-slate-400">No recent deposits</td></tr>`;
+        } else {
+            recentDeps.forEach(d => {
+                const statusBadge = d.status === 'approved'
+                    ? `<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px]">Approved</span>`
+                    : (d.status === 'rejected' ? `<span class="px-2 py-0.5 rounded-full bg-red-50 text-red-600 font-bold text-[10px]">Rejected</span>` : `<button onclick="approveDepositById('${escapeHtml(d.id)}')" class="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-bold text-[10px] hover:bg-emerald-700">Approve</button>`);
+                depTbody.innerHTML += `
+                    <tr>
+                        <td class="py-2.5 font-semibold text-slate-800 truncate max-w-[120px]">${escapeHtml(d.userEmail)}</td>
+                        <td class="py-2.5"><span class="font-bold text-[#5215b5]">${escapeHtml(d.method)}</span> • <span class="font-mono text-slate-500">${escapeHtml(d.trxId)}</span></td>
+                        <td class="py-2.5 font-bold text-slate-800">৳${escapeHtml(d.amount)}</td>
+                        <td class="py-2.5 text-right">${statusBadge}</td>
+                    </tr>`;
+            });
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadSettings() {
+        db.ref('settings/general').once('value').then(snap => {
+            const d = snap.val() || {};
+            document.getElementById('set-sitename').value = d.siteName || '';
+            document.getElementById('set-logo').value = d.logoUrl || '';
+            document.getElementById('set-notice').value = d.notice || '';
+            document.getElementById('set-applink').value = d.appLink || '';
+            document.getElementById('set-bkash-logo').value = d.bKashLogoUrl || '';
+            document.getElementById('set-nagad-logo').value = d.NagadLogoUrl || '';
+            document.getElementById('set-rocket-logo').value = d.RocketLogoUrl || '';
+            document.getElementById('set-whatsapp').value = d.whatsapp || '';
+            document.getElementById('set-telegram').value = d.telegram || '';
+            document.getElementById('set-facebook').value = d.facebook || '';
+            document.getElementById('set-youtube').value = d.youtube || '';
+            document.getElementById('set-promo-img').value = d.promoImageUrl || '';
+            document.getElementById('set-promo-link').value = d.promoImageLink || '';
+            document.getElementById('set-uid-api').value = d.playerNameCheckApiUrl || '';
+            if (document.getElementById('set-ff-like-api')) {
+                document.getElementById('set-ff-like-api').value = d.ffLikeApiUrl || '';
+            }
+            document.getElementById('set-favicon-url').value = d.faviconUrl || '';
+            document.getElementById('set-wallet-logo').value = d.walletLogoUrl || '';
+            document.getElementById('set-autopay').checked = Boolean(d.autoPayEnabled);
+        });
+        db.ref('admin/email').once('value').then(snap => {
+            const emailVal = snap.val() || (auth.currentUser && auth.currentUser.email) || '';
+            const el = document.getElementById('set-admin-email');
+            if (el) el.value = emailVal;
+        });
+        db.ref('settings/videos').once('value').then(snap => {
+            const d = snap.val() || {};
+            document.getElementById('set-tutorial-vid').value = d.howToAddMoney || '';
+        });
+        db.ref('admin/payment').once('value').then(snap => {
+            const d = snap.val() || {};
+            const fallbackNum = d.number || '';
+            document.getElementById('set-bkash').value = d.bKash || d.bkash || fallbackNum;
+            document.getElementById('set-nagad').value = d.Nagad || d.nagad || fallbackNum;
+            document.getElementById('set-rocket').value = d.Rocket || d.rocket || fallbackNum;
+        });
+        db.ref('admin/credentials').once('value').then(snap => {
+            const c = snap.val() || {};
+            const secEmail = document.getElementById('set-admin-login-email');
+            const secPass = document.getElementById('set-admin-login-pass');
+            if (secEmail) secEmail.value = c.email || (auth.currentUser && auth.currentUser.email) || DEFAULT_ADMIN_EMAIL;
+            if (secPass) secPass.value = c.password || DEFAULT_ADMIN_PASS;
+        });
+    }
+
+    
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function testAdminUidApi() {
+        const apiUrl = document.getElementById('set-uid-api')?.value.trim() || '';
+        if (!apiUrl) {
+            return Swal.fire('API URL Empty', 'Please enter your Player Name Check API URL first.', 'warning');
+        }
+        const { value: testUid } = await Swal.fire({
+            title: 'Test Player Name API',
+            input: 'text',
+            inputLabel: 'Enter a sample Player UID to test',
+            inputPlaceholder: 'e.g. 123456789',
+            showCancelButton: true,
+            confirmButtonText: 'Check Now'
+        });
+        if (!testUid) return;
+
+        showLoading();
+        try {
+            let targetUrl = apiUrl;
+            const enc = encodeURIComponent(testUid.trim());
+            if (/(\{uid\}|\{id\}|\{\{uid\}\}|\[uid\]|\$\{uid\})/i.test(targetUrl)) {
+                targetUrl = targetUrl.replace(/(\{uid\}|\{id\}|\{\{uid\}\}|\[uid\]|\$\{uid\})/gi, enc);
+            } else if (targetUrl.endsWith('=') || targetUrl.endsWith('/')) {
+                targetUrl += enc;
+            } else if (targetUrl.includes('?')) {
+                targetUrl += (/[?&](uid|id|playerid)=$/i.test(targetUrl) ? '' : '&uid=') + enc;
+            } else {
+                targetUrl += '?uid=' + enc;
+            }
+
+            let rawText = '';
+            try {
+                const r = await fetch(targetUrl);
+                if (r.ok) rawText = await r.text();
+            } catch (_) {}
+            if (!rawText) {
+                const r2 = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`);
+                if (r2.ok) rawText = await r2.text();
+            }
+            hideLoading();
+            Swal.fire({
+                title: 'API Response Received',
+                html: `<div class="text-left bg-slate-900 text-emerald-400 p-3 rounded-xl font-mono text-xs overflow-x-auto max-h-48">${escapeHtml(rawText || 'Empty response')}</div>`,
+                icon: 'info'
+            });
+        } catch (e) {
+            hideLoading();
+            Swal.fire('API Test Failed', e.message || 'Could not reach the API endpoint.', 'error');
+        }
+    }
+
+    
+    let ffLikeApiUrlGlobal = "";
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function extractLikeCountFromPackage(pkgName) {
+        const str = String(pkgName || '');
+        const m = str.match(/(\d+)/);
+        return m ? m[1] : '100';
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function isLikeOrderOrService(serviceId, gameName, serviceType) {
+        const sId = String(serviceId || '').toLowerCase();
+        const gName = String(gameName || '').toLowerCase();
+        if (sId.includes('like') || gName.includes('like') || gName.includes('👍')) return true;
+        if (serviceType === 'auto-topup') return true;
+        return false;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function buildLikeApiRequestUrl(rawTemplate, uid, pkgName, serverName = 'BD') {
+        let url = String(rawTemplate || '').trim();
+        if (!url) return '';
+        const encUid = encodeURIComponent(String(uid || '').trim());
+        const likeCount = encodeURIComponent(extractLikeCountFromPackage(pkgName));
+        const encServer = encodeURIComponent(serverName || 'BD');
+
+        let uidReplaced = false;
+
+        // 1. Replace explicit placeholders if present: {uid}, {id}, {like}, {likes}, {amount}, {server}, {server_name}
+        if (/(\{uid\}|\{id\}|\{\{uid\}\}|\[uid\]|\$\{uid\})/i.test(url)) {
+            url = url.replace(/(\{uid\}|\{id\}|\{\{uid\}\}|\[uid\]|\$\{uid\})/gi, encUid);
+            uidReplaced = true;
+        }
+        if (/(\{like\}|\{likes\}|\{amount\}|\{count\})/i.test(url)) {
+            url = url.replace(/(\{like\}|\{likes\}|\{amount\}|\{count\})/gi, likeCount);
+        }
+        if (/(\{server\}|\{server_name\}|\{region\})/i.test(url)) {
+            url = url.replace(/(\{server\}|\{server_name\}|\{region\})/gi, encServer);
+        }
+
+        // 2. Also support URLs pasted with example values like ?uid=123456789&like=200 or ?uid=9811998438&server_name=BD
+        if (!uidReplaced && /([?&](?:uid|id|playerid|player_id)=)([^&#]*)/i.test(url)) {
+            url = url.replace(/([?&](?:uid|id|playerid|player_id)=)([^&#]*)/gi, '$1' + encUid);
+            uidReplaced = true;
+        }
+        if (/([?&](?:like|likes|amount|count)=)([^&#]*)/i.test(url)) {
+            url = url.replace(/([?&](?:like|likes|amount|count)=)([^&#]*)/gi, '$1' + likeCount);
+        }
+        if (/([?&](?:server_name|server|region)=)([^&#]*)/i.test(url)) {
+            url = url.replace(/([?&](?:server_name|server|region)=)([^&#]*)/gi, '$1' + encServer);
+        }
+
+        // 3. If still no uid parameter was in the URL, append it
+        if (!uidReplaced) {
+            if (url.endsWith('=') || url.endsWith('/')) {
+                url += encUid;
+            } else if (url.includes('?')) {
+                url += '&uid=' + encUid;
+            } else {
+                url += '?uid=' + encUid;
+            }
+        }
+
+        return url;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function callLikeApiEndpoint(targetUrl) {
+        // 1. Try direct fetch
+        try {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 9000);
+            const res = await fetch(targetUrl, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json, text/plain, */*' },
+                signal: controller.signal
+            });
+            clearTimeout(timer);
+            if (res.ok) {
+                const txt = await res.text();
+                if (txt && txt.trim()) return txt.trim();
+            }
+        } catch (_) {}
+
+        // 2. Try AllOrigins raw proxy
+        try {
+            const proxy1 = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(proxy1, { signal: controller.signal });
+            clearTimeout(timer);
+            if (res.ok) {
+                const txt = await res.text();
+                if (txt && txt.trim()) return txt.trim();
+            }
+        } catch (_) {}
+
+        // 3. Try AllOrigins JSON wrapper
+        try {
+            const proxy2 = `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`;
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(proxy2, { signal: controller.signal });
+            clearTimeout(timer);
+            if (res.ok) {
+                const json = await res.json();
+                if (json && json.contents) return String(json.contents).trim();
+            }
+        } catch (_) {}
+
+        // 4. Try Codetabs proxy
+        try {
+            const proxy3 = `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`;
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(proxy3, { signal: controller.signal });
+            clearTimeout(timer);
+            if (res.ok) {
+                const txt = await res.text();
+                if (txt && txt.trim()) return txt.trim();
+            }
+        } catch (_) {}
+
+        throw new Error('Could not reach Like API server');
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function formatLikeApiResultSummary(rawText, defaultLikes) {
+        if (!rawText) return `Like Delivered (${defaultLikes} Likes)`;
+        try {
+            const obj = typeof rawText === 'object' ? rawText : JSON.parse(rawText);
+            if (obj && typeof obj === 'object') {
+                const given = obj.LikesGivenByAPI || obj.likes_added || obj.likesGiven || obj.likes || obj.like_added || obj.given;
+                const after = obj.LikesafterCommand || obj.likes_after || obj.totalLikes || obj.after;
+                const nick = obj.PlayerNickname || obj.nickname || obj.name || obj.player_name;
+                const msg = obj.message || obj.msg || obj.status_message;
+                const parts = [];
+                if (nick) parts.push(`Player: ${nick}`);
+                if (given !== undefined) parts.push(`+${given} Likes Added`);
+                if (after !== undefined) parts.push(`Total: ${after}`);
+                if (parts.length > 0) return parts.join(' | ');
+                if (typeof msg === 'string' && msg.trim()) return msg.trim().slice(0, 80);
+            }
+        } catch (_) {}
+        const cleanStr = String(rawText).replace(/<[^>]*>/g, '').trim();
+        return cleanStr ? cleanStr.slice(0, 80) : `Auto Delivered (${defaultLikes} Likes)`;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function resolveLikeApiTemplateForService(serviceId) {
+        // Check service-specific apiUrl first, then global ffLikeApiUrl
+        try {
+            if (serviceId) {
+                const srvSnap = await db.ref(`services/${serviceId}/apiUrl`).once('value');
+                if (srvSnap.exists() && String(srvSnap.val() || '').trim()) {
+                    return String(srvSnap.val()).trim();
+                }
+            }
+            const globalSnap = await db.ref('settings/general/ffLikeApiUrl').once('value');
+            if (globalSnap.exists() && String(globalSnap.val() || '').trim()) {
+                return String(globalSnap.val()).trim();
+            }
+        } catch (_) {}
+        return ffLikeApiUrlGlobal || '';
+    }
+
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function triggerLikeApiForOrder(order, orderRef) {
+        if (!order || !order.playerId || order.playerId === 'N/A' || order.playerId === 'Voucher Request') {
+            return null;
+        }
+        const isLikeSrv = isLikeOrderOrService(order.gameId, order.gameName, order.type);
+        if (!isLikeSrv) return null;
+
+        const apiTemplate = await resolveLikeApiTemplateForService(order.gameId);
+        if (!apiTemplate) return null;
+
+        const targetUrl = buildLikeApiRequestUrl(apiTemplate, order.playerId, order.productName, 'BD');
+        const rawResp = await callLikeApiEndpoint(targetUrl);
+        const defaultLikes = extractLikeCountFromPackage(order.productName);
+        const summary = formatLikeApiResultSummary(rawResp, defaultLikes);
+
+        if (orderRef) {
+            await orderRef.update({
+                status: 'success',
+                apiDelivered: true,
+                redeemCode: order.redeemCode || summary,
+                apiResponse: String(rawResp || '').slice(0, 500),
+                deliveredAt: Date.now()
+            });
+        }
+        return summary;
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function testAdminLikeApi() {
+        const apiUrl = document.getElementById('set-ff-like-api')?.value.trim() || '';
+        if (!apiUrl) {
+            return Swal.fire('API URL Empty', 'Please enter your Free Fire Like API URL first.', 'warning');
+        }
+        const { value: formValues } = await Swal.fire({
+            title: 'Test Free Fire Like API',
+            html: `
+                <div class="space-y-3 text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Player UID</label>
+                        <input id="swal-test-uid" class="pixel-input font-mono" placeholder="e.g. 9811998438" value="9811998438">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Like Amount / Package</label>
+                        <input id="swal-test-like" class="pixel-input" placeholder="e.g. 200 Likes" value="200">
+                    </div>
+                </div>
+            `,
+            showCancelButton: true,
+            confirmButtonText: 'Send Test Request',
+            preConfirm: () => {
+                return {
+                    uid: document.getElementById('swal-test-uid').value.trim(),
+                    like: document.getElementById('swal-test-like').value.trim()
+                };
+            }
+        });
+        if (!formValues || !formValues.uid) return;
+
+        showLoading();
+        try {
+            const finalUrl = buildLikeApiRequestUrl(apiUrl, formValues.uid, formValues.like, 'BD');
+            const rawResp = await callLikeApiEndpoint(finalUrl);
+            const summary = formatLikeApiResultSummary(rawResp, extractLikeCountFromPackage(formValues.like));
+            hideLoading();
+            Swal.fire({
+                title: 'Like API Response',
+                html: `
+                    <div class="text-left space-y-2 text-xs">
+                        <div class="p-2.5 bg-purple-50 border border-purple-100 rounded-xl font-mono text-[11px] break-all text-[#5215b5]">
+                            <b>Request URL:</b><br>${escapeHtml(finalUrl)}
+                        </div>
+                        <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl font-bold text-emerald-800">
+                            Status: ${escapeHtml(summary)}
+                        </div>
+                        <div class="bg-slate-900 text-emerald-400 p-3 rounded-xl font-mono text-[11px] overflow-x-auto max-h-44">
+                            ${escapeHtml(rawResp)}
+                        </div>
+                    </div>
+                `,
+                icon: 'success'
+            });
+        } catch (err) {
+            hideLoading();
+            Swal.fire('Like API Error', err.message || 'Failed to connect to Like API.', 'error');
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function saveSettings(type) {
+        showLoading();
+        const tasks = [];
+
+        if (type === 'general') {
+            const logoUrl = document.getElementById('set-logo').value.trim();
+            const adminEmail = document.getElementById('set-admin-email')?.value.trim() || '';
+            tasks.push(db.ref('settings/general').update({
+                siteName: document.getElementById('set-sitename').value.trim(),
+                logoUrl: logoUrl,
+                headerLogoUrl: logoUrl,
+                aboutLogoUrl: logoUrl,
+                notice: document.getElementById('set-notice').value,
+                appLink: document.getElementById('set-applink').value.trim()
+            }));
+            if (adminEmail) {
+                tasks.push(db.ref('admin/email').set(adminEmail));
+            }
+            if (logoUrl) {
+                tasks.push(db.ref('assets/pixel_topup_logo_header').update({ name: 'pixel_topup_logo_header', url: logoUrl }));
+            }
+        } else if (type === 'social') {
+            tasks.push(db.ref('settings/general').update({
+                whatsapp: document.getElementById('set-whatsapp').value.trim(),
+                telegram: document.getElementById('set-telegram').value.trim(),
+                facebook: document.getElementById('set-facebook').value.trim(),
+                youtube: document.getElementById('set-youtube').value.trim()
+            }));
+        } else if (type === 'payment') {
+            const bk = document.getElementById('set-bkash').value.trim();
+            const ng = document.getElementById('set-nagad').value.trim();
+            const rk = document.getElementById('set-rocket').value.trim();
+            const bkLogo = document.getElementById('set-bkash-logo').value.trim();
+            const ngLogo = document.getElementById('set-nagad-logo').value.trim();
+            const rkLogo = document.getElementById('set-rocket-logo').value.trim();
+
+            tasks.push(db.ref('admin/payment').update({
+                number: bk || ng || rk || '',
+                method: 'bKash',
+                bKash: bk, bkash: bk,
+                Nagad: ng, nagad: ng,
+                Rocket: rk, rocket: rk
+            }));
+            tasks.push(db.ref('settings/general').update({
+                bKashLogoUrl: bkLogo,
+                NagadLogoUrl: ngLogo,
+                RocketLogoUrl: rkLogo
+            }));
+            if (bkLogo) tasks.push(db.ref('assets/bKashLogoUrl').update({ name: 'bKashLogoUrl', url: bkLogo }));
+            if (ngLogo) tasks.push(db.ref('assets/NagadLogoUrl').update({ name: 'NagadLogoUrl', url: ngLogo }));
+            if (rkLogo) tasks.push(db.ref('assets/RocketLogoUrl').update({ name: 'RocketLogoUrl', url: rkLogo }));
+        } else if (type === 'advanced') {
+            const favUrl = document.getElementById('set-favicon-url').value.trim();
+            const walUrl = document.getElementById('set-wallet-logo').value.trim();
+            const genUpdates = {
+                promoImageUrl: document.getElementById('set-promo-img').value.trim(),
+                promoImageLink: document.getElementById('set-promo-link').value.trim(),
+                playerNameCheckApiUrl: document.getElementById('set-uid-api').value.trim(),
+                ffLikeApiUrl: document.getElementById('set-ff-like-api') ? document.getElementById('set-ff-like-api').value.trim() : '',
+                autoPayEnabled: Boolean(document.getElementById('set-autopay').checked)
+            };
+            if (favUrl) genUpdates.faviconUrl = favUrl;
+            if (walUrl) genUpdates.walletLogoUrl = walUrl;
+
+            tasks.push(db.ref('settings/general').update(genUpdates));
+            if (genUpdates.ffLikeApiUrl) {
+                tasks.push(db.ref('services/freefire-like').update({ apiUrl: genUpdates.ffLikeApiUrl }));
+            }
+            tasks.push(db.ref('settings/videos').update({
+                howToAddMoney: document.getElementById('set-tutorial-vid').value.trim()
+            }));
+            if (favUrl) tasks.push(db.ref('assets/favicon').update({ name: 'favicon', url: favUrl }));
+            if (walUrl) tasks.push(db.ref('assets/wallet_logo').update({ name: 'wallet_logo', url: walUrl }));
+        }
+
+        Promise.all(tasks).then(() => {
+            hideLoading();
+            Swal.fire('Saved', 'Settings updated in Realtime Database!', 'success');
+        }).catch(err => {
+            hideLoading();
+            Swal.fire('Error', err.message, 'error');
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadCategories() {
+        db.ref('categories').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, c]) => ({ id, ...(c || {}) }))
+                .sort((a, b) => (Number(a.slot) || 0) - (Number(b.slot) || 0));
+            categoriesMap = {};
+            sorted.forEach(c => { categoriesMap[c.id] = c; });
+            renderCategoriesUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderCategoriesUI() {
+        const list = document.getElementById('cat-list');
+        const drop = document.getElementById('srv-category');
+        if (list) list.innerHTML = '';
+        if (drop) drop.innerHTML = '<option value="">Select Category</option>';
+
+        Object.values(categoriesMap).forEach(c => {
+            const gameCount = Object.values(servicesMap).filter(s => s && s.categoryId === c.id).length;
+            if (list) {
+                list.innerHTML += `
+                    <tr>
+                        <td><span class="px-2.5 py-1 rounded-lg bg-purple-50 text-[#5215b5] font-bold text-xs">#${escapeHtml(c.slot)}</span></td>
+                        <td><span class="font-bold text-slate-800">${escapeHtml(c.name)}</span></td>
+                        <td><span class="text-xs font-semibold text-slate-500">${gameCount} Games</span></td>
+                        <td class="text-center space-x-1.5">
+                            <button onclick="openEditCategoryModal('${escapeHtml(c.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                            <button onclick="deleteDocItem('categories', '${escapeHtml(c.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>`;
+            }
+            if (drop) drop.innerHTML += `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)}</option>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addCategory() {
+        const name = document.getElementById('cat-name').value.trim();
+        const slot = parseInt(document.getElementById('cat-slot').value || 1);
+        if (!name) return Swal.fire('Required', 'Please enter a category name', 'warning');
+
+        const catId = slugifyId(name, 'cat');
+        showLoading();
+        db.ref('categories/' + catId).set({ name, slot }).then(() => {
+            hideLoading();
+            document.getElementById('cat-name').value = '';
+            document.getElementById('cat-slot').value = '';
+        }).catch(err => {
+            hideLoading();
+            Swal.fire('Error', err.message, 'error');
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditCategoryModal(catId) {
+        const c = categoriesMap[catId];
+        if (!c) return;
+        openEditModal('Edit Category', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Category Name</label>
+                <input type="text" id="edit-cat-name" value="${escapeHtml(c.name)}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Sort Order Slot</label>
+                <input type="number" id="edit-cat-slot" value="${escapeHtml(c.slot)}" class="pixel-input">
+            </div>
+        `, () => {
+            const newName = document.getElementById('edit-cat-name').value.trim();
+            const newSlot = parseInt(document.getElementById('edit-cat-slot').value || 1);
+            if (!newName) return Swal.fire('Error', 'Category name cannot be empty', 'error');
+
+            showLoading();
+            db.ref('categories/' + catId).update({ name: newName, slot: newSlot }).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Updated', 'Category updated successfully', 'success');
+            }).catch(err => {
+                hideLoading();
+                Swal.fire('Error', err.message, 'error');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadServices() {
+        db.ref('services').on('value', snap => {
+            const raw = snap.val() || {};
+            servicesMap = {};
+            Object.entries(raw).forEach(([id, s]) => {
+                servicesMap[id] = { id, ...(s || {}) };
+            });
+            renderServicesUI();
+            renderCategoriesUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderServicesUI() {
+        const list = document.getElementById('srv-list');
+        if (!list) return;
+        list.innerHTML = '';
+        Object.values(servicesMap).forEach(s => {
+            const catName = categoriesMap[s.categoryId]?.name || 'Uncategorized';
+            const iconUrl = s.image || s.icon || '';
+            const iconHtml = iconUrl
+                ? `<img src="${escapeHtml(iconUrl)}" class="h-12 w-12 object-cover rounded-xl border border-slate-200 mx-auto shadow-sm">`
+                : `<div class="h-12 w-12 rounded-xl bg-purple-50 text-[#5215b5] flex items-center justify-center font-bold mx-auto">${escapeHtml((s.name || 'G').charAt(0))}</div>`;
+            list.innerHTML += `
+                <tr>
+                    <td class="text-center">${iconHtml}</td>
+                    <td>
+                        <div class="font-bold text-slate-800">${escapeHtml(s.name)}</div>
+                        <div class="text-[11px] text-slate-400 truncate max-w-xs">${escapeHtml(s.rules || 'No rules specified')}</div>
+                    </td>
+                    <td><span class="text-xs font-semibold text-slate-600">${escapeHtml(catName)}</span></td>
+                    <td><span class="px-2.5 py-1 bg-purple-50 text-[#5215b5] border border-purple-200 rounded-lg text-[11px] font-bold uppercase">${escapeHtml(s.type)}</span></td>
+                    <td class="text-center space-x-1.5 whitespace-nowrap">
+                        <button onclick="openServicePackages('${escapeHtml(s.id)}')" class="pixel-btn py-1.5 px-3 text-xs"><i class="fas fa-box-open"></i> Packages</button>
+                        <button onclick="openEditServiceModal('${escapeHtml(s.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteDocItem('services', '${escapeHtml(s.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openServicePackages(srvId) {
+        const s = servicesMap[srvId];
+        if (!s) return;
+        switchView('products', s.id, s.name, s.type);
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addService() {
+        const name = document.getElementById('srv-name').value.trim();
+        const image = document.getElementById('srv-image').value.trim();
+        const categoryId = document.getElementById('srv-category').value;
+        const type = document.getElementById('srv-type').value;
+        const rules = document.getElementById('srv-rules').value;
+        const apiUrl = document.getElementById('srv-api-url') ? document.getElementById('srv-api-url').value.trim() : '';
+        if (!name || !categoryId) return Swal.fire('Error', 'Service Name and Category are required', 'error');
+
+        let srvId = slugifyId(name, 'service');
+        if (servicesMap[srvId]) srvId = srvId + '-' + Date.now().toString().slice(-4);
+
+        showLoading();
+        db.ref('services/' + srvId).set({
+            name,
+            image,
+            icon: image,
+            categoryId,
+            type,
+            rules,
+            apiUrl,
+            products: {}
+        }).then(() => {
+            hideLoading();
+            document.getElementById('srv-name').value = '';
+            document.getElementById('srv-image').value = '';
+            document.getElementById('srv-rules').value = '';
+            Swal.fire({ toast: true, position: 'top-end', icon: 'success', title: 'Service Created', showConfirmButton: false, timer: 1400 });
+        }).catch(err => {
+            hideLoading();
+            Swal.fire('Error', err.message, 'error');
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditServiceModal(srvId) {
+        const s = servicesMap[srvId];
+        if (!s) return;
+        let catOptions = '<option value="">Select Category</option>';
+        Object.values(categoriesMap).forEach(c => {
+            const sel = c.id === s.categoryId ? 'selected' : '';
+            catOptions += `<option value="${escapeHtml(c.id)}" ${sel}>${escapeHtml(c.name)}</option>`;
+        });
+
+        openEditModal('Edit Service / Game', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Service / Game Name</label>
+                <input type="text" id="edit-srv-name" value="${escapeHtml(s.name)}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Image URL (Direct Link)</label>
+                <input type="url" id="edit-srv-image" value="${escapeHtml(s.image || s.icon || '')}" class="pixel-input">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Category</label>
+                    <select id="edit-srv-cat" class="pixel-input">${catOptions}</select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Delivery Type</label>
+                    <select id="edit-srv-type" class="pixel-input">
+                        <option value="uid" ${s.type === 'uid' ? 'selected' : ''}>UID TopUp (Manual)</option>
+                        <option value="code" ${s.type === 'code' ? 'selected' : ''}>Voucher Code (Auto)</option>
+                        <option value="auto-topup" ${s.type === 'auto-topup' ? 'selected' : ''}>Auto TopUp (API)</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Auto-Delivery / Like API URL (Optional)</label>
+                <input type="url" id="edit-srv-api" value="${escapeHtml(s.apiUrl || '')}" placeholder="https://api.demosite.top/api/ff-likes?api=KEY&uid={uid}&like={like}" class="pixel-input font-mono text-xs">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Rules & Instructions</label>
+                <textarea id="edit-srv-rules" class="pixel-input h-28">${escapeHtml(s.rules || '')}</textarea>
+            </div>
+        `, () => {
+            const imgVal = document.getElementById('edit-srv-image').value.trim();
+            const updated = {
+                name: document.getElementById('edit-srv-name').value.trim(),
+                image: imgVal,
+                icon: imgVal,
+                categoryId: document.getElementById('edit-srv-cat').value,
+                type: document.getElementById('edit-srv-type').value,
+                apiUrl: document.getElementById('edit-srv-api') ? document.getElementById('edit-srv-api').value.trim() : (s.apiUrl || ''),
+                rules: document.getElementById('edit-srv-rules').value
+            };
+            if (!updated.name) return Swal.fire('Error', 'Service name is required', 'error');
+
+            showLoading();
+            db.ref('services/' + srvId).update(updated).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Updated', 'Service updated successfully', 'success');
+            }).catch(err => {
+                hideLoading();
+                Swal.fire('Error', err.message, 'error');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadProducts() {
+        if (!currentServiceId) return;
+        if (activeProductsRef) {
+            activeProductsRef.off();
+            activeProductsRef = null;
+        }
+        activeProductsRef = db.ref('services/' + currentServiceId + '/products');
+        activeProductsRef.on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, p]) => ({ id, ...(p || {}) }))
+                .sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
+            productsMap = {};
+            sorted.forEach(p => { productsMap[p.id] = p; });
+            renderProductsUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderProductsUI() {
+        const list = document.getElementById('prod-list');
+        if (!list) return;
+        list.innerHTML = '';
+        const items = Object.values(productsMap);
+        if (items.length === 0) {
+            list.innerHTML = `<tr><td colspan="5" class="text-center py-6 text-slate-400">No packages created for this game yet.</td></tr>`;
+            return;
+        }
+        items.forEach(p => {
+            let stockBtn = '';
+            if (currentServiceType === 'code' || currentServiceType === 'auto-topup') {
+                stockBtn = `<button onclick="openProductStock('${escapeHtml(p.id)}')" class="pixel-btn-outline py-1.5 px-3 text-xs"><i class="fas fa-key text-[#5215b5]"></i> Stock (${p.stockCount || 0})</button>`;
+            }
+            const imgUrl = p.imageUrl || servicesMap[currentServiceId]?.image || '';
+            const imgHtml = imgUrl
+                ? `<img src="${escapeHtml(imgUrl)}" class="w-9 h-9 rounded-lg object-cover border border-slate-200 mx-auto">`
+                : `<span class="text-xs text-slate-400">-</span>`;
+            list.innerHTML += `
+                <tr>
+                    <td><span class="font-bold text-slate-800">${escapeHtml(p.name)}</span></td>
+                    <td><span class="font-extrabold text-[#5215b5] text-base">৳${escapeHtml(p.price)}</span></td>
+                    <td class="text-center">${imgHtml}</td>
+                    <td>${(currentServiceType === 'code' || currentServiceType === 'auto-topup') ? `<span class="px-2.5 py-1 rounded-full text-xs font-bold ${(p.stockCount || 0) > 0 ? 'bg-emerald-50 text-emerald-600' : 'bg-red-50 text-red-600'}">${p.stockCount || 0} Codes</span>` : '<span class="text-xs text-slate-400">Direct UID</span>'}</td>
+                    <td class="text-center space-x-1.5 whitespace-nowrap">
+                        ${stockBtn}
+                        <button onclick="openEditProductModal('${escapeHtml(p.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteProduct('${escapeHtml(p.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openProductStock(prodId) {
+        const p = productsMap[prodId];
+        if (!p) return;
+        switchView('stock', p.id, p.name);
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addProduct() {
+        const name = document.getElementById('prod-name').value.trim();
+        const price = parseInt(document.getElementById('prod-price').value);
+        const imageUrl = document.getElementById('prod-image').value.trim() || (servicesMap[currentServiceId] && servicesMap[currentServiceId].image) || '';
+        if (!name || isNaN(price)) return Swal.fire('Required', 'Please enter package name and valid price', 'warning');
+
+        const data = {
+            name,
+            price,
+            imageUrl,
+            stockCount: (currentServiceType === 'code' || currentServiceType === 'auto-topup') ? 0 : 1
+        };
+        showLoading();
+        db.ref(`services/${currentServiceId}/products`).push(data).then(() => {
+            hideLoading();
+            document.getElementById('prod-name').value = '';
+            document.getElementById('prod-price').value = '';
+            document.getElementById('prod-image').value = '';
+        }).catch(err => {
+            hideLoading();
+            Swal.fire('Error', err.message, 'error');
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditProductModal(prodId) {
+        const p = productsMap[prodId];
+        if (!p) return;
+        openEditModal('Edit Recharge Package', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Package Name</label>
+                <input type="text" id="edit-prod-name" value="${escapeHtml(p.name)}" class="pixel-input">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Price (৳)</label>
+                    <input type="number" id="edit-prod-price" value="${escapeHtml(p.price)}" class="pixel-input">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Stock Count</label>
+                    <input type="number" id="edit-prod-stock" value="${escapeHtml(p.stockCount ?? 1)}" class="pixel-input">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Product Image URL (Direct Link)</label>
+                <input type="url" id="edit-prod-image" value="${escapeHtml(p.imageUrl || servicesMap[currentServiceId]?.image || '')}" class="pixel-input">
+            </div>
+        `, () => {
+            const newName = document.getElementById('edit-prod-name').value.trim();
+            const newPrice = parseInt(document.getElementById('edit-prod-price').value);
+            const newStock = parseInt(document.getElementById('edit-prod-stock').value || 0);
+            const newImage = document.getElementById('edit-prod-image').value.trim();
+            if (!newName || isNaN(newPrice)) return Swal.fire('Error', 'Valid name and price required', 'error');
+
+            showLoading();
+            db.ref(`services/${currentServiceId}/products/${prodId}`).update({
+                name: newName,
+                price: newPrice,
+                stockCount: Math.max(0, newStock),
+                imageUrl: newImage
+            }).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Updated', 'Package updated successfully', 'success');
+            }).catch(err => {
+                hideLoading();
+                Swal.fire('Error', err.message, 'error');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function deleteProduct(prodId) {
+        Swal.fire({ title: 'Delete Package?', text: 'This package will be removed permanently.', icon: 'warning', showCancelButton: true, confirmButtonColor: '#dc2626' }).then(r => {
+            if (!r.isConfirmed) return;
+            db.ref(`services/${currentServiceId}/products/${prodId}`).remove();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadStock() {
+        if (!currentServiceId || !currentProductId) return;
+        if (activeStockRef) {
+            activeStockRef.off();
+            activeStockRef = null;
+        }
+        activeStockRef = db.ref(`services/${currentServiceId}/products/${currentProductId}/stock`);
+        activeStockRef.on('value', snap => {
+            const raw = snap.val() || {};
+            const items = Object.entries(raw)
+                .map(([id, s]) => ({ id, ...(s || {}) }))
+                .filter(s => !s.status || s.status === 'available')
+                .sort((a, b) => parseDateMs(b.addedAt) - parseDateMs(a.addedAt));
+            stockMap = {};
+            items.forEach(s => { stockMap[s.id] = s; });
+            renderStockUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderStockUI() {
+        const list = document.getElementById('stock-list');
+        if (!list) return;
+        list.innerHTML = '';
+        const items = Object.values(stockMap);
+        if (items.length === 0) {
+            list.innerHTML = `<tr><td colspan="3" class="text-center py-6 text-slate-400">No stock codes available for this package.</td></tr>`;
+            return;
+        }
+        items.forEach(s => {
+            list.innerHTML += `
+                <tr>
+                    <td class="font-mono font-bold text-[#5215b5]">${escapeHtml(s.code)}</td>
+                    <td class="text-slate-400 text-xs">${escapeHtml(formatDateVal(s.addedAt))}</td>
+                    <td class="text-center space-x-1.5">
+                        <button onclick="openEditStockModal('${escapeHtml(s.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteStock('${escapeHtml(s.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function addStock() {
+        const lines = document.getElementById('stock-codes').value.split('\n').map(l => l.trim()).filter(l => l);
+        if (lines.length === 0) return Swal.fire('Empty', 'Please enter at least one code', 'warning');
+
+        showLoading();
+        try {
+            const prodRef = db.ref(`services/${currentServiceId}/products/${currentProductId}`);
+            const stockRef = prodRef.child('stock');
+            const now = Date.now();
+            for (const code of lines) {
+                await stockRef.push({ code, status: 'available', addedAt: now });
+            }
+            const snap = await stockRef.once('value');
+            const allStock = snap.val() || {};
+            const availCount = Object.values(allStock).filter(s => s && (!s.status || s.status === 'available')).length;
+            await prodRef.update({ stockCount: availCount });
+            hideLoading();
+            document.getElementById('stock-codes').value = '';
+            Swal.fire('Success', `${lines.length} codes imported to Realtime Database!`, 'success');
+        } catch (e) {
+            hideLoading();
+            Swal.fire('Error', e.message, 'error');
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditStockModal(stkId) {
+        const s = stockMap[stkId];
+        if (!s) return;
+        openEditModal('Edit Stock Code', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Voucher / Redeem Code</label>
+                <input type="text" id="edit-stk-code" value="${escapeHtml(s.code)}" class="pixel-input font-mono">
+            </div>
+        `, () => {
+            const newCode = document.getElementById('edit-stk-code').value.trim();
+            if (!newCode) return;
+            showLoading();
+            db.ref(`services/${currentServiceId}/products/${currentProductId}/stock/${stkId}`).update({ code: newCode }).then(() => {
+                hideLoading();
+                closeEditModal();
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function deleteStock(stockId) {
+        const prodRef = db.ref(`services/${currentServiceId}/products/${currentProductId}`);
+        await prodRef.child('stock/' + stockId).remove();
+        const snap = await prodRef.child('stock').once('value');
+        const allStock = snap.val() || {};
+        const availCount = Object.values(allStock).filter(s => s && (!s.status || s.status === 'available')).length;
+        await prodRef.update({ stockCount: availCount });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadOrders() {
+        const filter = document.getElementById('order-filter')?.value || 'all';
+        db.ref('orders').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, o]) => ({ id, ...(o || {}) }))
+                .sort((a, b) => parseDateMs(b.date) - parseDateMs(a.date));
+
+            ordersMap = {};
+            sorted.forEach(o => {
+                if (filter === 'all' || o.status === filter || (filter === 'success' && o.status === 'completed')) {
+                    ordersMap[o.id] = o;
+                }
+            });
+            renderOrdersTable();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderOrdersTable() {
+        const list = document.getElementById('order-list');
+        if (!list) return;
+        const search = (document.getElementById('order-search')?.value || '').toLowerCase();
+        list.innerHTML = '';
+
+        const items = Object.values(ordersMap).filter(o => {
+            if (!search) return true;
+            return (o.playerId || '').toLowerCase().includes(search) ||
+                   (o.userName || '').toLowerCase().includes(search) ||
+                   (o.userEmail || '').toLowerCase().includes(search) ||
+                   (o.productName || '').toLowerCase().includes(search) ||
+                   (o.gameName || '').toLowerCase().includes(search);
+        });
+
+        if (items.length === 0) {
+            list.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-slate-400">No matching orders found.</td></tr>`;
+            return;
+        }
+
+        items.forEach(d => {
+            const targetInfo = d.redeemCode
+                ? `<div class="text-xs font-bold text-slate-700">ID: ${escapeHtml(d.playerId)}</div><div class="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded mt-0.5 inline-block">Code: ${escapeHtml(d.redeemCode)}</div>`
+                : `<span class="font-mono font-bold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-lg text-xs">${escapeHtml(d.playerId)}</span>`;
+
+            const statusClass = (d.status === 'success' || d.status === 'completed')
+                ? 'text-emerald-700 bg-emerald-50 border-emerald-200'
+                : (d.status === 'cancel' || d.status === 'rejected' ? 'text-red-700 bg-red-50 border-red-200' : 'text-amber-700 bg-amber-50 border-amber-200');
+
+            list.innerHTML += `
+                <tr>
+                    <td class="text-slate-400 text-xs whitespace-nowrap">${escapeHtml(formatDateVal(d.date))}</td>
+                    <td>
+                        <div class="font-bold text-slate-800">${escapeHtml(d.userName || 'Customer')}</div>
+                        <div class="text-[11px] text-slate-400">${escapeHtml(d.userEmail || '')}</div>
+                    </td>
+                    <td>
+                        <div class="font-bold text-slate-800">${escapeHtml(d.gameName)}</div>
+                        <div class="text-xs font-semibold text-[#5215b5]">${escapeHtml(d.productName)}</div>
+                    </td>
+                    <td>${targetInfo}</td>
+                    <td class="font-extrabold text-slate-800">৳${escapeHtml(d.price)}</td>
+                    <td>
+                        <select onchange="updateOrderStatus('${escapeHtml(d.id)}', this.value)" class="px-2.5 py-1.5 rounded-xl text-xs font-bold uppercase border ${statusClass} outline-none cursor-pointer">
+                            <option value="pending" ${d.status === 'pending' ? 'selected' : ''}>Pending</option>
+                            <option value="processing" ${d.status === 'processing' ? 'selected' : ''}>Processing</option>
+                            <option value="success" ${(d.status === 'success' || d.status === 'completed') ? 'selected' : ''}>Success</option>
+                            <option value="cancel" ${(d.status === 'cancel' || d.status === 'rejected') ? 'selected' : ''}>Canceled</option>
+                        </select>
+                    </td>
+                    <td class="text-center space-x-1.5 whitespace-nowrap">
+                        <button onclick="openEditOrderModal('${escapeHtml(d.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteDocItem('orders', '${escapeHtml(d.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    async function updateOrderStatus(id, status) {
+        const allowed = new Set(['pending', 'processing', 'success', 'cancel']);
+        if (!allowed.has(status)) return Swal.fire('Invalid status', 'Choose a valid order status.', 'error');
+
+        if (status === 'cancel') {
+            const confirmation = await Swal.fire({
+                title: 'Cancel this order and refund wallet?',
+                text: 'If this order was not already refunded, the order price will be credited back to the customer wallet.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Cancel & Refund',
+                cancelButtonText: 'Keep Order',
+                confirmButtonColor: '#dc2626'
+            });
+            if (!confirmation.isConfirmed) {
+                loadOrders();
+                return;
+            }
+        }
+
+        showLoading();
+        try {
+            const orderRef = db.ref('orders/' + id);
+            const snap = await orderRef.once('value');
+            if (!snap.exists()) throw new Error('Order not found.');
+            const order = snap.val() || {};
+
+            if (status === 'cancel' && !order.refunded && order.userId) {
+                const amount = Number(order.price || 0);
+                if (amount > 0) {
+                    const userRef = db.ref('users/' + order.userId);
+                    const userSnap = await userRef.once('value');
+                    if (userSnap.exists()) {
+                        const bal = Number(userSnap.val().balance || 0);
+                        await userRef.update({ balance: bal + amount });
+                    }
+                }
+                await orderRef.update({
+                    status: 'cancel',
+                    refunded: true,
+                    refundAmount: amount,
+                    refundedAt: Date.now()
+                });
+            } else if (status === 'success' && !order.apiDelivered) {
+                let apiSummary = null;
+                try {
+                    apiSummary = await triggerLikeApiForOrder(order, orderRef);
+                } catch (apiErr) {
+                    console.warn('Admin status change Like API trigger error:', apiErr);
+                }
+                if (!apiSummary) {
+                    await orderRef.update({ status });
+                }
+            } else {
+                await orderRef.update({ status });
+            }
+            hideLoading();
+            Swal.fire({ toast: true, position: 'top-end', icon: 'success', title: status === 'cancel' ? 'Order canceled & refunded' : `Order marked ${status}`, showConfirmButton: false, timer: 1600 });
+        } catch (error) {
+            hideLoading();
+            loadOrders();
+            Swal.fire('Status update failed', error.message || 'Could not update this order.', 'error');
+        }
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditOrderModal(ordId) {
+        const o = ordersMap[ordId];
+        if (!o) return;
+        openEditModal('Edit Order Details', `
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Game Name</label>
+                    <input type="text" id="edit-ord-game" value="${escapeHtml(o.gameName)}" class="pixel-input">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Package Name</label>
+                    <input type="text" id="edit-ord-pack" value="${escapeHtml(o.productName)}" class="pixel-input">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Player ID / Target</label>
+                    <input type="text" id="edit-ord-player" value="${escapeHtml(o.playerId)}" class="pixel-input font-mono">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Price (৳)</label>
+                    <input type="number" id="edit-ord-price" value="${escapeHtml(o.price)}" class="pixel-input">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Voucher / Redeem Code (Optional - shown in user history)</label>
+                <input type="text" id="edit-ord-code" value="${escapeHtml(o.redeemCode || '')}" placeholder="Enter redeem code or delivery note" class="pixel-input font-mono">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Order Status</label>
+                <select id="edit-ord-status" class="pixel-input">
+                    <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>Pending</option>
+                    <option value="processing" ${o.status === 'processing' ? 'selected' : ''}>Processing</option>
+                    <option value="success" ${(o.status === 'success' || o.status === 'completed') ? 'selected' : ''}>Success / Completed</option>
+                    <option value="cancel" ${o.status === 'cancel' ? 'selected' : ''}>Canceled</option>
+                </select>
+            </div>
+        `, () => {
+            const updated = {
+                gameName: document.getElementById('edit-ord-game').value.trim(),
+                productName: document.getElementById('edit-ord-pack').value.trim(),
+                playerId: document.getElementById('edit-ord-player').value.trim(),
+                price: Number(document.getElementById('edit-ord-price').value || o.price),
+                redeemCode: document.getElementById('edit-ord-code').value.trim(),
+                status: document.getElementById('edit-ord-status').value
+            };
+            showLoading();
+            db.ref('orders/' + ordId).update(updated).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Updated', 'Order updated successfully', 'success');
+            }).catch(err => {
+                hideLoading();
+                Swal.fire('Error', err.message, 'error');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadDeposits() {
+        db.ref('deposits').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, d]) => ({ id, ...(d || {}) }))
+                .sort((a, b) => parseDateMs(b.date) - parseDateMs(a.date));
+            depositsMap = {};
+            sorted.forEach(d => { depositsMap[d.id] = d; });
+            renderDepositsTable();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderDepositsTable() {
+        const list = document.getElementById('deposit-list');
+        if (!list) return;
+        const search = (document.getElementById('deposit-search')?.value || '').toLowerCase();
+        const statusFilter = document.getElementById('deposit-filter')?.value || 'all';
+        list.innerHTML = '';
+
+        const items = Object.values(depositsMap).filter(d => {
+            if (statusFilter !== 'all' && d.status !== statusFilter) return false;
+            if (!search) return true;
+            return (d.trxId || '').toLowerCase().includes(search) ||
+                   (d.userEmail || '').toLowerCase().includes(search) ||
+                   (d.method || '').toLowerCase().includes(search);
+        });
+
+        if (items.length === 0) {
+            list.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-slate-400">No deposit requests found.</td></tr>`;
+            return;
+        }
+
+        items.forEach(d => {
+            const statusBadge = d.status === 'approved'
+                ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
+                : (d.status === 'rejected' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-amber-50 text-amber-600 border-amber-200');
+
+            let actionBtns = '';
+            if (d.status === 'pending') {
+                actionBtns += `
+                    <button onclick="approveDepositById('${escapeHtml(d.id)}')" class="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition" title="Approve & Add Balance"><i class="fas fa-check"></i></button>
+                    <button onclick="rejectDepositById('${escapeHtml(d.id)}')" class="px-2.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition" title="Reject"><i class="fas fa-ban"></i></button>
+                `;
+            }
+
+            list.innerHTML += `
+                <tr>
+                    <td class="text-slate-400 text-xs whitespace-nowrap">${escapeHtml(formatDateVal(d.date))}</td>
+                    <td><span class="font-bold text-slate-800 break-all">${escapeHtml(d.userEmail)}</span></td>
+                    <td><span class="font-bold text-[#5215b5]">${escapeHtml(d.method)}</span></td>
+                    <td><span class="font-mono font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg text-xs">${escapeHtml(d.trxId)}</span></td>
+                    <td class="font-extrabold text-slate-800">৳${escapeHtml(d.amount)}</td>
+                    <td><span class="px-2.5 py-1 rounded-full text-[11px] font-bold uppercase border ${statusBadge}">${escapeHtml(d.status)}</span></td>
+                    <td class="text-center space-x-1 whitespace-nowrap">
+                        ${actionBtns}
+                        <button onclick="openEditDepositModal('${escapeHtml(d.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i></button>
+                        <button onclick="deleteDocItem('deposits', '${escapeHtml(d.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function approveDepositById(depId) {
+        const d = depositsMap[depId];
+        if (!d) return;
+        Swal.fire({
+            title: `Approve ৳${d.amount}?`,
+            text: `৳${d.amount} will be credited to ${d.userEmail}'s wallet.`,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#059669',
+            confirmButtonText: 'Yes, Approve'
+        }).then(async (r) => {
+            if (!r.isConfirmed) return;
+            showLoading();
+            try {
+                const depRef = db.ref('deposits/' + depId);
+                const depSnap = await depRef.once('value');
+                if (!depSnap.exists() || depSnap.val().status !== 'pending') {
+                    throw new Error('This deposit has already been processed.');
+                }
+                const userRef = db.ref('users/' + d.userId);
+                const uSnap = await userRef.once('value');
+                if (!uSnap.exists()) throw new Error('User account not found.');
+                const newBal = Number(uSnap.val().balance || 0) + parseInt(d.amount || 0);
+                await userRef.update({ balance: newBal });
+                await depRef.update({ status: 'approved', approvedAt: Date.now() });
+                hideLoading();
+                Swal.fire('Approved', 'Balance added successfully', 'success');
+            } catch (e) {
+                hideLoading();
+                Swal.fire('Error', e.message, 'error');
+            }
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function rejectDepositById(depId) {
+        Swal.fire({ title: 'Reject Deposit?', icon: 'warning', showCancelButton: true, confirmButtonColor: '#dc2626' }).then(r => {
+            if (!r.isConfirmed) return;
+            db.ref('deposits/' + depId).update({ status: 'rejected' });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditDepositModal(depId) {
+        const d = depositsMap[depId];
+        if (!d) return;
+        openEditModal('Edit Deposit Request', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">User Email</label>
+                <input type="email" id="edit-dep-email" value="${escapeHtml(d.userEmail)}" class="pixel-input">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Payment Method</label>
+                    <input type="text" id="edit-dep-method" value="${escapeHtml(d.method)}" class="pixel-input">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Amount (৳)</label>
+                    <input type="number" id="edit-dep-amount" value="${escapeHtml(d.amount)}" class="pixel-input">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Transaction ID (TrxID)</label>
+                    <input type="text" id="edit-dep-trx" value="${escapeHtml(d.trxId)}" class="pixel-input font-mono">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Status</label>
+                    <select id="edit-dep-status" class="pixel-input">
+                        <option value="pending" ${d.status === 'pending' ? 'selected' : ''}>Pending</option>
+                        <option value="approved" ${d.status === 'approved' ? 'selected' : ''}>Approved</option>
+                        <option value="rejected" ${d.status === 'rejected' ? 'selected' : ''}>Rejected</option>
+                    </select>
+                </div>
+            </div>
+        `, () => {
+            const updated = {
+                userEmail: document.getElementById('edit-dep-email').value.trim(),
+                method: document.getElementById('edit-dep-method').value.trim(),
+                amount: parseInt(document.getElementById('edit-dep-amount').value || 0),
+                trxId: document.getElementById('edit-dep-trx').value.trim().toUpperCase(),
+                status: document.getElementById('edit-dep-status').value
+            };
+            showLoading();
+            db.ref('deposits/' + depId).update(updated).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Updated', 'Deposit record updated', 'success');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadUsers() {
+        db.ref('users').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, u]) => ({ id, ...(u || {}) }))
+                .sort((a, b) => parseDateMs(b.createdAt) - parseDateMs(a.createdAt));
+            usersMap = {};
+            sorted.forEach(u => { usersMap[u.id] = u; });
+            renderUsers(Object.values(usersMap));
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function searchUsers() {
+        const term = (document.getElementById('user-search')?.value || '').toLowerCase();
+        const filtered = Object.values(usersMap).filter(u =>
+            (u.email || '').toLowerCase().includes(term) ||
+            (u.name || '').toLowerCase().includes(term) ||
+            (u.phone || '').toLowerCase().includes(term)
+        );
+        renderUsers(filtered);
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderUsers(users) {
+        const list = document.getElementById('user-list');
+        if (!list) return;
+        list.innerHTML = '';
+        if (users.length === 0) {
+            list.innerHTML = `<tr><td colspan="5" class="text-center py-8 text-slate-400">No users found.</td></tr>`;
+            return;
+        }
+        users.forEach(u => {
+            list.innerHTML += `
+                <tr>
+                    <td class="text-slate-400 text-xs">${escapeHtml(formatDateVal(u.createdAt))}</td>
+                    <td>
+                        <div class="flex items-center gap-2.5">
+                            ${u.photoURL ? `<img src="${escapeHtml(u.photoURL)}" class="w-8 h-8 rounded-full object-cover border border-purple-200">` : `<span class="w-8 h-8 rounded-full bg-purple-100 text-[#5215b5] flex items-center justify-center font-bold text-xs">${escapeHtml((u.name || 'U').charAt(0).toUpperCase())}</span>`}
+                            <span class="font-bold text-slate-800">${escapeHtml(u.name || 'User')}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text-xs font-semibold text-slate-700">${escapeHtml(u.email)}</div>
+                        <div class="text-[11px] text-slate-400">${escapeHtml(u.phone || 'No phone')}</div>
+                    </td>
+                    <td><span class="px-3 py-1 rounded-full bg-purple-50 text-[#5215b5] font-extrabold text-sm">৳${escapeHtml(u.balance || 0)}</span></td>
+                    <td class="text-center space-x-1.5 whitespace-nowrap">
+                        <button onclick="openEditUserModal('${escapeHtml(u.id)}')" class="pixel-btn-edit"><i class="fas fa-user-edit"></i> Edit User</button>
+                        <button onclick="deleteDocItem('users', '${escapeHtml(u.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openAddUserModal() {
+        openEditModal('Add New User Account', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Full Name</label>
+                <input type="text" id="new-usr-name" placeholder="Customer Name" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Email Address</label>
+                <input type="email" id="new-usr-email" placeholder="user@example.com" class="pixel-input">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Phone Number</label>
+                    <input type="text" id="new-usr-phone" placeholder="017XXXXXXXX" class="pixel-input">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Initial Wallet Balance (৳)</label>
+                    <input type="number" id="new-usr-bal" value="0" class="pixel-input">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Profile Image URL (Optional Link)</label>
+                <input type="url" id="new-usr-photo" placeholder="https://..." class="pixel-input">
+            </div>
+        `, () => {
+            const name = document.getElementById('new-usr-name').value.trim();
+            const email = document.getElementById('new-usr-email').value.trim();
+            const phone = document.getElementById('new-usr-phone').value.trim();
+            const balance = parseInt(document.getElementById('new-usr-bal').value || 0);
+            const photoURL = document.getElementById('new-usr-photo').value.trim();
+            if (!name || !email) return Swal.fire('Required', 'Name and Email are required', 'warning');
+
+            showLoading();
+            db.ref('users').push({ name, email, phone, balance, photoURL, createdAt: Date.now() }).then(() => {
+                hideLoading();
+                closeEditModal();
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditUserModal(uid) {
+        const u = usersMap[uid];
+        if (!u) return;
+        openEditModal('Edit User & Wallet Balance', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Full Name</label>
+                <input type="text" id="edit-usr-name" value="${escapeHtml(u.name || '')}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Email Address</label>
+                <input type="email" id="edit-usr-email" value="${escapeHtml(u.email || '')}" class="pixel-input">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Phone Number</label>
+                    <input type="text" id="edit-usr-phone" value="${escapeHtml(u.phone || '')}" class="pixel-input">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Wallet Balance (৳)</label>
+                    <input type="number" id="edit-usr-bal" value="${escapeHtml(u.balance || 0)}" class="pixel-input font-bold text-[#5215b5]">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Profile Image URL (Direct Link)</label>
+                <input type="url" id="edit-usr-photo" value="${escapeHtml(u.photoURL || '')}" placeholder="https://..." class="pixel-input">
+            </div>
+        `, () => {
+            const updated = {
+                name: document.getElementById('edit-usr-name').value.trim(),
+                email: document.getElementById('edit-usr-email').value.trim(),
+                phone: document.getElementById('edit-usr-phone').value.trim(),
+                balance: parseInt(document.getElementById('edit-usr-bal').value || 0),
+                photoURL: document.getElementById('edit-usr-photo').value.trim()
+            };
+            showLoading();
+            db.ref('users/' + uid).update(updated).then(() => {
+                hideLoading();
+                closeEditModal();
+                Swal.fire('Success', 'User profile & balance updated', 'success');
+            }).catch(err => {
+                hideLoading();
+                Swal.fire('Error', err.message, 'error');
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadUnpinCodes() {
+        db.ref('unpin_codes').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, c]) => ({ id, ...(c || {}) }))
+                .sort((a, b) => parseDateMs(b.addedAt) - parseDateMs(a.addedAt));
+            unpinMap = {};
+            sorted.forEach(c => { unpinMap[c.id] = c; });
+            renderUnpinUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderUnpinUI() {
+        const list = document.getElementById('unpin-list');
+        if (!list) return;
+        list.innerHTML = '';
+        Object.values(unpinMap).forEach(c => {
+            list.innerHTML += `
+                <tr>
+                    <td class="font-mono font-bold text-[#5215b5] text-sm">${escapeHtml(c.code)}</td>
+                    <td class="text-slate-400 text-xs">${escapeHtml(formatDateVal(c.addedAt))}</td>
+                    <td class="text-center space-x-1.5">
+                        <button onclick="openEditUnpinModal('${escapeHtml(c.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteDocItem('unpin_codes', '${escapeHtml(c.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addUnpinCode() {
+        const code = document.getElementById('unpin-code').value.trim();
+        if (!code) return;
+        showLoading();
+        db.ref('unpin_codes').push({ code, addedAt: Date.now() }).then(() => {
+            hideLoading();
+            document.getElementById('unpin-code').value = '';
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditUnpinModal(id) {
+        const item = unpinMap[id];
+        if (!item) return;
+        openEditModal('Edit Unpin Code', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Unpin Code</label>
+                <input type="text" id="edit-unpin-val" value="${escapeHtml(item.code)}" class="pixel-input font-mono">
+            </div>
+        `, () => {
+            const code = document.getElementById('edit-unpin-val').value.trim();
+            if (!code) return;
+            showLoading();
+            db.ref('unpin_codes/' + id).update({ code }).then(() => {
+                hideLoading();
+                closeEditModal();
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadTutorials() {
+        db.ref('tutorials').on('value', snap => {
+            const raw = snap.val() || {};
+            tutorialsMap = {};
+            Object.entries(raw).forEach(([id, t]) => {
+                tutorialsMap[id] = { id, ...(t || {}) };
+            });
+            renderTutorialsUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderTutorialsUI() {
+        const list = document.getElementById('tut-list');
+        if (!list) return;
+        list.innerHTML = '';
+        Object.values(tutorialsMap).forEach(t => {
+            const thumbUrl = t.thumbnail || '';
+            const thumbHtml = thumbUrl
+                ? `<img src="${escapeHtml(thumbUrl)}" class="h-12 w-20 object-cover rounded-lg border border-slate-200 mx-auto">`
+                : `<span class="text-xs text-slate-400">No Image</span>`;
+            list.innerHTML += `
+                <tr>
+                    <td class="text-center">${thumbHtml}</td>
+                    <td><span class="font-bold text-slate-800">${escapeHtml(t.title)}</span></td>
+                    <td><a href="${escapeHtml(t.link)}" target="_blank" class="text-[#5215b5] text-xs font-bold hover:underline">Watch Video <i class="fas fa-external-link-alt ml-1"></i></a></td>
+                    <td class="text-center space-x-1.5">
+                        <button onclick="openEditTutorialModal('${escapeHtml(t.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteDocItem('tutorials', '${escapeHtml(t.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addTutorial() {
+        const title = document.getElementById('tut-title').value.trim();
+        const link = document.getElementById('tut-link').value.trim();
+        const thumbnail = document.getElementById('tut-thumb').value.trim();
+        if (!title || !link) return Swal.fire('Required', 'Title and Video Link are required', 'warning');
+
+        showLoading();
+        db.ref('tutorials').push({ title, link, thumbnail }).then(() => {
+            hideLoading();
+            document.getElementById('tut-title').value = '';
+            document.getElementById('tut-link').value = '';
+            document.getElementById('tut-thumb').value = '';
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditTutorialModal(id) {
+        const t = tutorialsMap[id];
+        if (!t) return;
+        openEditModal('Edit Video Tutorial', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Tutorial Title</label>
+                <input type="text" id="edit-tut-title" value="${escapeHtml(t.title)}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Video Link URL</label>
+                <input type="url" id="edit-tut-link" value="${escapeHtml(t.link)}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Thumbnail Image URL (Direct Link)</label>
+                <input type="url" id="edit-tut-thumb" value="${escapeHtml(t.thumbnail)}" class="pixel-input">
+            </div>
+        `, () => {
+            const updated = {
+                title: document.getElementById('edit-tut-title').value.trim(),
+                link: document.getElementById('edit-tut-link').value.trim(),
+                thumbnail: document.getElementById('edit-tut-thumb').value.trim()
+            };
+            if (!updated.title) return;
+            showLoading();
+            db.ref('tutorials/' + id).update(updated).then(() => {
+                hideLoading();
+                closeEditModal();
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function syncBannerUrlsArray() {
+        const urls = Object.values(bannersMap)
+            .filter(b => b && b.image)
+            .sort((a, b) => (Number(a.slot) || 0) - (Number(b.slot) || 0))
+            .map(b => b.image);
+        db.ref('settings/general/bannerUrls').set(urls);
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function loadBanners() {
+        db.ref('banners').on('value', snap => {
+            const raw = snap.val() || {};
+            const sorted = Object.entries(raw)
+                .map(([id, b]) => ({ id, ...(b || {}) }))
+                .sort((a, b) => (Number(a.slot) || 0) - (Number(b.slot) || 0));
+            bannersMap = {};
+            sorted.forEach(b => { bannersMap[b.id] = b; });
+            renderBannersUI();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function renderBannersUI() {
+        const list = document.getElementById('ban-list');
+        if (!list) return;
+        list.innerHTML = '';
+        Object.values(bannersMap).forEach(b => {
+            list.innerHTML += `
+                <tr>
+                    <td class="text-center"><img src="${escapeHtml(b.image)}" class="h-14 w-32 object-cover rounded-xl border border-slate-200 mx-auto shadow-sm"></td>
+                    <td class="text-xs text-slate-500 break-all font-mono">${escapeHtml(b.image)}</td>
+                    <td class="text-center space-x-1.5">
+                        <button onclick="openEditBannerModal('${escapeHtml(b.id)}')" class="pixel-btn-edit"><i class="fas fa-pen"></i> Edit</button>
+                        <button onclick="deleteDocItem('banners', '${escapeHtml(b.id)}')" class="pixel-btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function addBanner() {
+        const image = document.getElementById('ban-img').value.trim();
+        if (!image) return Swal.fire('Required', 'Please paste a Banner Image URL link', 'warning');
+        const nextSlot = Object.keys(bannersMap).length + 1;
+        showLoading();
+        db.ref('banners').push({ image, slot: nextSlot }).then(() => {
+            hideLoading();
+            document.getElementById('ban-img').value = '';
+            syncBannerUrlsArray();
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function openEditBannerModal(id) {
+        const b = bannersMap[id];
+        if (!b) return;
+        openEditModal('Edit Slider Banner', `
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Banner Image URL (Direct Link)</label>
+                <input type="url" id="edit-ban-img" value="${escapeHtml(b.image)}" class="pixel-input">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-600 mb-1">Display Slot</label>
+                <input type="number" id="edit-ban-slot" value="${escapeHtml(b.slot || 1)}" class="pixel-input">
+            </div>
+        `, () => {
+            const image = document.getElementById('edit-ban-img').value.trim();
+            const slot = parseInt(document.getElementById('edit-ban-slot').value || 1);
+            if (!image) return;
+            showLoading();
+            db.ref('banners/' + id).update({ image, slot }).then(() => {
+                hideLoading();
+                closeEditModal();
+                syncBannerUrlsArray();
+            });
+        });
+    }
+
+    // DEVELOP BY https://t.me/Infinity_Codex
+    function deleteDocItem(collection, id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'This item will be permanently deleted.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#dc2626',
+            confirmButtonText: 'Yes, Delete'
+        }).then(r => {
+            if (!r.isConfirmed) return;
+            db.ref(collection + '/' + id).remove().then(() => {
+                if (collection === 'banners') syncBannerUrlsArray();
+            });
+        });
+    }
+    // DEVELOP BY https://t.me/Infinity_Codex
+</script>
+    <!-- DEVELOP BY https://t.me/Infinity_Codex -->
+<script>
+    // DEVELOP BY https://t.me/Infinity_Codex
+    // Check URL query parameters for pre-filling admin email
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const pEmail = urlParams.get('email');
+        if (pEmail && document.getElementById('admin-email')) {
+            document.getElementById('admin-email').value = pEmail;
+        }
+    } catch (_) {}
+    // DEVELOP BY https://t.me/Infinity_Codex
+</script>
+</body>
+</html><!-- DEVELOP BY https://t.me/Infinity_Codex -->
